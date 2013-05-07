@@ -14,7 +14,7 @@ The goal of this project was to create something that would satisfy the need of 
 {% highlight php %}
 $table = new Grid();
 
-// define the columns using "addColumn(dbColumnName, DisplayText)"
+// Define the columns using "addColumn(dbColumnName, DisplayText)
 $table->addColumn("id", "ID");
 $table->addColumn("fName", "First Name");
 $table->addColumn("lName", "Last Name");
@@ -22,12 +22,12 @@ $table->addColumn("sex", "Gender");
 $table->addColumn("age", "Current Age");
 $table->addColumn("email", "Contact Email");
 
-// format individual columns
+// Format individual columns
 $table->columns["age"]->textAlign = "center";
 $table->columns["sex"]->replaceValue("m", "Male");
 $table->columns["sex"]->replaceValue("f", "Female");
 
-// set the data source for the table and output the html
+// Set the data source for the table and output the html
 $table->setDataSource($MySqlQueryResult);
 $table->render();
 {% endhighlight %}

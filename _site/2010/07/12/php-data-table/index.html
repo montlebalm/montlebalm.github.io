@@ -45,7 +45,7 @@
 
 <div class="highlight"><pre><code class="php"><span class="x">$table = new Grid();</span>
 
-<span class="x">// define the columns using &quot;addColumn(dbColumnName, DisplayText)&quot;</span>
+<span class="x">// Define the columns using &quot;addColumn(dbColumnName, DisplayText)</span>
 <span class="x">$table-&gt;addColumn(&quot;id&quot;, &quot;ID&quot;);</span>
 <span class="x">$table-&gt;addColumn(&quot;fName&quot;, &quot;First Name&quot;);</span>
 <span class="x">$table-&gt;addColumn(&quot;lName&quot;, &quot;Last Name&quot;);</span>
@@ -53,12 +53,12 @@
 <span class="x">$table-&gt;addColumn(&quot;age&quot;, &quot;Current Age&quot;);</span>
 <span class="x">$table-&gt;addColumn(&quot;email&quot;, &quot;Contact Email&quot;);</span>
 
-<span class="x">// format individual columns</span>
+<span class="x">// Format individual columns</span>
 <span class="x">$table-&gt;columns[&quot;age&quot;]-&gt;textAlign = &quot;center&quot;;</span>
 <span class="x">$table-&gt;columns[&quot;sex&quot;]-&gt;replaceValue(&quot;m&quot;, &quot;Male&quot;);</span>
 <span class="x">$table-&gt;columns[&quot;sex&quot;]-&gt;replaceValue(&quot;f&quot;, &quot;Female&quot;);</span>
 
-<span class="x">// set the data source for the table and output the html</span>
+<span class="x">// Set the data source for the table and output the html</span>
 <span class="x">$table-&gt;setDataSource($MySqlQueryResult);</span>
 <span class="x">$table-&gt;render();</span>
 </code></pre></div>
