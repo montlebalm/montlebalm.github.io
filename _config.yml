@@ -1,0 +1,10 @@
+name: "ChrisMontrois"
+description: "Developer. Dude."
+
+url: "http://www.chrismontrois.com"
+
+paginate: 20
+
+markdown: rdiscount
+permalink: pretty
+pygments: true
