@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ChrisMontrois</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Developer. Dude.">
+
+		<link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="/css/base.css" rel="stylesheet" />
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="site-wrapper row">
+				<header class="site-header clearfix">
+					<div class="span2">
+						<a href="http://chrismontrois.com/" accesskey="1" class="site-logo"></a>
+					</div>
+					<nav class="span8 row">
+						<a href="/">Blog</a>
+						<a href="/setup/">Setup</a>
+						<a href="/about/">About</a>
+					</nav>
+				</header>
+				<section class="site-content clearfix">
+
+	<article class="clearfix">
+		<header class="clearfix">
+			<h1 class="span8">PHP Data Table</h1>
+		</header>
+		<div class="span8 post-content"><p>One nice thing about working in ASP.NET is the abundance of pre-made controls. They are convenient, powerful, and can be bound to numerous different data sources. Unfortunately, they are also bloated, slow, and unwieldy. The combined HTML and ViewState of a GridView (ASP.NET Web Control) is enough to drive a conscientious developer mad.</p>
+
+<p>Here is a <a href="http://quickstarts.asp.net/QuickStartv20/aspnet/samples/data/GridViewBoundFields_vb.aspx">GridView demo</a> on the official ASP.NET QuickStart site. I won't post it here, but the ViewState produced by the table is almost 5,000 characters long. If we include server-side sorting, the number jumps up a bit more and requires another call to the database. There are some benefits to the Microsoft, but in the end it feels like too much for too little.</p>
+
+<p>The goal of this project was to create something that would satisfy the need of a GridView with a much smaller footprint. I am sure there is a PHP library somewhere bursting with similar functionality, but that wouldn't be much fun.</p>
+
+<h1>Code</h1>
+
+<div class="highlight"><pre><code class="php"><span class="x">$table = new Grid();</span>
+
+<span class="x">// define the columns using &quot;addColumn(dbColumnName, DisplayText)&quot;</span>
+<span class="x">$table-&gt;addColumn(&quot;id&quot;, &quot;ID&quot;);</span>
+<span class="x">$table-&gt;addColumn(&quot;fName&quot;, &quot;First Name&quot;);</span>
+<span class="x">$table-&gt;addColumn(&quot;lName&quot;, &quot;Last Name&quot;);</span>
+<span class="x">$table-&gt;addColumn(&quot;sex&quot;, &quot;Gender&quot;);</span>
+<span class="x">$table-&gt;addColumn(&quot;age&quot;, &quot;Current Age&quot;);</span>
+<span class="x">$table-&gt;addColumn(&quot;email&quot;, &quot;Contact Email&quot;);</span>
+
+<span class="x">// format individual columns</span>
+<span class="x">$table-&gt;columns[&quot;age&quot;]-&gt;textAlign = &quot;center&quot;;</span>
+<span class="x">$table-&gt;columns[&quot;sex&quot;]-&gt;replaceValue(&quot;m&quot;, &quot;Male&quot;);</span>
+<span class="x">$table-&gt;columns[&quot;sex&quot;]-&gt;replaceValue(&quot;f&quot;, &quot;Female&quot;);</span>
+
+<span class="x">// set the data source for the table and output the html</span>
+<span class="x">$table-&gt;setDataSource($MySqlQueryResult);</span>
+<span class="x">$table-&gt;render();</span>
+</code></pre></div>
+
+
+<p>The first line assigns and instantiates a new Grid object. The next block defines the columns using the database column name and the display text that will appear in the table header.</p>
+
+<p>Once columns have been created they can be configured individually. The first formatted column, "age", has its text-align style set to "center". I have not opened up every style attribute but it would be easy to do.</p>
+
+<p>The next two lines allow for a table value to be replaced with a given string. In this case, we want to switch the gender indicator "m" with something more informative, like "Male". Anywhere "m" would appear in the "Gender" column, the table will use "Male" instead. Replacement values don't have to stop at text. For instance, checkboxes could be used in place of a boolean value.</p>
+
+<p>The last lines of code tell the Grid what MySQL query to use and then to output the HTML. The result is clean, semantic markup.</p>
+
+<h1>Grid Features</h1>
+
+<p>The Grid comes with it's own internal stylesheet but users can override it by changing the Grid object's css class name.</p>
+
+<p>jQuery based column sorting is enabled by default and runs smoothly even on large data sets. In Safari 5 (Build 6533.16), a 6 column table with 1,000 rows sorts in 200ms.</p>
+
+<p>If table columns are not explicitly defined, the grid will generate them from the MySQL query columns. In that instance, column configuration would not be available as the column array is defined at output.</p>
+
+<h1>Future</h1>
+
+<p>I'm pleased with the Grid for the amount of time spent developing it. I was able to do some Object Oriented PHP work that helped illustrate some of the differences between it and other languages I've used.</p>
+
+<p>I'm especially happy with the Javascript sorting technique. It provides just the right amount of functionality for this project. The overhead of <a href="http://tablesorter.com/docs/">Tablesorter</a> has been an issue in past. Large tables often result in the "A script on this page is running slowly" dialog.</p>
+
+<p>If I return to this project, I will add support for nested tables. They've been indispensable in several work-related projects and the functionality would be fun to replicate in PHP.</p>
+</div>
+	</article>
+
+				</section>
+				<footer class="site-footer span8 offset2 clearfix">
+					<nav>
+						<!-- <a href="http://chrismontrois.com/archives.html">Archives</a> -->
+						<!-- <a href="http://chrismontrois.com/atom.xml">Subscribe</a> -->
+						<a href="/about/">About</a>
+						<a href="/setup/">Setup</a>
+						<a href="mailto:chris@chrismontrois.net">Email</a>
+					</nav>
+					<span>Chris Montrois © 2009-2013</span>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

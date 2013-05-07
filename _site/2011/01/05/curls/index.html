@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ChrisMontrois</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Developer. Dude.">
+
+		<link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="/css/base.css" rel="stylesheet" />
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="site-wrapper row">
+				<header class="site-header clearfix">
+					<div class="span2">
+						<a href="http://chrismontrois.com/" accesskey="1" class="site-logo"></a>
+					</div>
+					<nav class="span8 row">
+						<a href="/">Blog</a>
+						<a href="/setup/">Setup</a>
+						<a href="/about/">About</a>
+					</nav>
+				</header>
+				<section class="site-content clearfix">
+
+	<article class="clearfix">
+		<header class="clearfix">
+			<h1 class="span8">Curls</h1>
+		</header>
+		<div class="span8 post-content"><p>On December 17, 2010, Yahoo! made an internal announcement that foretold the death of the bookmarking service <a href="http://www.delicious.com/">delicious</a>. After the inevitable uproar, the company backpedalled and said they would look to sell the service in tact (despite having fired or transferred many people associated with the product).</p>
+
+<p>The removal of the internet icon got me thinking about the supposed enduring nature of online entities. We take for granted that the services we use today will be there tomorrow simply because the internet is a perpetual medium. We should remember that these products were designed by companies whose concern lies with their bottom line rather than your list of seafood recipes. It did not benefit Yahoo! to keep delicious and so it is gone.</p>
+
+<p>With delicious out of commission, I decided to step up and fill the online void with my own indomitable kraken. It is as much an act of leaning and discovery as it is a practical application. I'm not talking about anything groundbreaking, but rather a site that is simply fast and easy to use. After a few days of extracurricular moonlighting I came up with "<a href='http://demo.urls.chrismontrois.net/'>curls - chris's url relocation &amp; library service</a>."</p>
+
+<p><img alt="Curls application" src="/img/posts/curls.jpg" /></p>
+
+<h1>Features</h1>
+
+<p>I started off wiring the site with some snazzy AJAX but decided to follow the <acronym title="Keep It Simple Stupid">KISS</acronym> principle and leave it at individual http requests. The application allows you to perform the following:</p>
+
+<ul>
+<li>Save, edit, and delete links</li>
+<li>Categorize links with one to many tags</li>
+<li>Find links by tag, date, or search term</li>
+</ul>
+
+
+<p>It's as basic a service as you can get away with, and so far it has met my needs.</p>
+
+<h1>Mod_Rewrite</h1>
+
+<p>For this project, I used Apache's mod_rewrite module to beautify my urls. For instance, <span class="code">http://urls.chrismontrois.net/dates/today</span> will show you all the links I've bookmarked today. It works similarly for tags and search strings.</p>
+
+<p>Since I'm on Dreamhost, I did not have access to Apache's <span class="code">httpd.conf</span>. Instead, I wrote a rule in the site's <span class="code">.htaccess</span> file. If you want to set up something similar, Elated.com's "<a href='http://www.elated.com/articles/mod-rewrite-tutorial-for-absolute-beginners/'>mod_rewrite Tutorial for Absolute Beginners</a>" is a good place to start.</p>
+
+<h1>Performance</h1>
+
+<p>With cache disabled, the site regularly loads in approximately one second. I optimized images using Yahoo!'s <a href="http://www.smushit.com/ysmush.it/">Smush.it</a> service as well as generated sprite sheets for my icons.</p>
+
+<p>For JavaScript and CSS, I've followed the rule-of-thumb practice of placing stylesheets at the top of the <span class="code">&lt;head&gt;</span> and scripts at the bottom of the <span class="code">&lt;body&gt;</span>.</p>
+
+<p>Another important performance gain comes from properly indexed database tables. Optimizing database queries is low hanging fruit when it comes to page speed.</p>
+
+<p>All told, the main page weighs in at 14.32KB. I could squeeze out a modicum more performance by minifying my CSS and JavaScript, but I opted for ease of updatability and left them alone.</p>
+
+<h1>Conclusion</h1>
+
+<p>It should be no surprise at this point, but I encourage everyone to reinvent the wheel if for no other reason than the opportunity to learn. If you're not constantly expanding your skill set, then you're a curator not a coder.</p>
+</div>
+	</article>
+
+				</section>
+				<footer class="site-footer span8 offset2 clearfix">
+					<nav>
+						<!-- <a href="http://chrismontrois.com/archives.html">Archives</a> -->
+						<!-- <a href="http://chrismontrois.com/atom.xml">Subscribe</a> -->
+						<a href="/about/">About</a>
+						<a href="/setup/">Setup</a>
+						<a href="mailto:chris@chrismontrois.net">Email</a>
+					</nav>
+					<span>Chris Montrois © 2009-2013</span>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

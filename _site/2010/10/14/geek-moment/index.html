@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ChrisMontrois</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Developer. Dude.">
+
+		<link href='//fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="/css/base.css" rel="stylesheet" />
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="site-wrapper row">
+				<header class="site-header clearfix">
+					<div class="span2">
+						<a href="http://chrismontrois.com/" accesskey="1" class="site-logo"></a>
+					</div>
+					<nav class="span8 row">
+						<a href="/">Blog</a>
+						<a href="/setup/">Setup</a>
+						<a href="/about/">About</a>
+					</nav>
+				</header>
+				<section class="site-content clearfix">
+
+	<article class="clearfix">
+		<header class="clearfix">
+			<h1 class="span8">Geek Moment</h1>
+		</header>
+		<div class="span8 post-content"><p>Today I experienced a geek moment that resonated in my very core. It all started with an urge to take a time lapsed movie of myself Slacklining. If you're not familiar with this wonderful pastime, Slacklining is the art of balancing on a nylon band supported between two points. With a few hours practice, you can expect to walk, bounce (ever so gently), and fall without harming yourself or others.</p>
+
+<p>Back to the task at hand; my first instinct was to use an external iSight to capture a movie since my desk is adjacent to a second floor window. However, sometime between mounting it on the monopod and positioning it in the frame, I realized it must be one of the creepiest looking things someone in a second floor window can do.</p>
+
+<p>Abandoning that, I knew there must be some way to use my fancy pants DSLR camera to sate this dark thirst. Mere moments later I was teetering on the brink of nerd ecstasy after discovering an Instructables article detailing <a href="http://www.instructables.com/id/Turn-a-TI-Graphing-Calculator-into-an-Intervalomet/">how to create an intervalometer using a TI-83 calculator</a>.</p>
+
+<p>I know.</p>
+
+<p>Luckily, I already had everything I needed to assemble this geek golem. Specifically, it requires a DSLR camera with a remote shutter release socket (preferably 2.5mm), a Texas Instruments graphing calculator, and a 2.5mm link cable.</p>
+
+<h1>Step 1: Cultivate the mind</h1>
+
+<p>First, we're going to create a controller program on our calculator. If you've forgotten how to create a new application I'll jog your memory. Simply hit the <span class="code">PRGM</span> key, hit the right arrow twice, and press <span class="code">ENTER</span>. Call it whatever you like so long as you can tell it apart from that quadratic equation program you made to cheat on your algebra test.</p>
+
+<p>The actual code provided in the tutorial was a little too basic for my needs. Instead, I used one suggested by "silentfallen" in the posts comments. If you don't know how to get some of these functions, <a href="http://www.ticalc.org/programming/columns/83plus-bas/cherny/">consult a specialist</a>. Here's the code.</p>
+
+<div class="highlight"><pre><code class="c"><span class="n">Disp</span> <span class="s">&quot;START DELAY?&quot;</span>
+<span class="n">Prompt</span> <span class="n">A</span>
+<span class="n">A</span><span class="o">*</span><span class="mf">333.333</span> <span class="o">&amp;</span><span class="err">#</span><span class="n">x2192</span><span class="p">;</span> <span class="n">W</span>
+<span class="n">Disp</span> <span class="s">&quot;HOW OFTEN?&quot;</span>
+<span class="n">Prompt</span> <span class="n">B</span>
+<span class="n">B</span><span class="o">*</span><span class="mf">333.333</span> <span class="o">&amp;</span><span class="err">#</span><span class="n">x2192</span><span class="p">;</span> <span class="n">X</span>
+<span class="n">Disp</span> <span class="s">&quot;HOW MANY SHOTS?&quot;</span>
+<span class="n">Prompt</span> <span class="n">Y</span>
+<span class="n">For</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">W</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">End</span>
+<span class="n">Send</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">Y</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;</span><span class="err">#</span><span class="n">x2192</span><span class="p">;</span> <span class="n">Y</span>
+<span class="n">While</span> <span class="n">Y</span><span class="o">&gt;</span><span class="mi">0</span>
+<span class="n">Y</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;</span><span class="err">#</span><span class="n">x2192</span><span class="p">;</span> <span class="n">Y</span>
+<span class="n">For</span><span class="p">(</span><span class="n">H</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">End</span>
+<span class="n">Send</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">End</span>
+</code></pre></div>
+
+
+<p>I should note that all time inputs will be evaluated in seconds. Thus, an input of "15, 5, 100" will cause the camera to wait 15 seconds and then proceed to take 100 photos with 5 seconds in between each picture.</p>
+
+<h1>There is no step 2</h1>
+
+<p>Connect your calculator to your camera using the link cable and you're done. Turn on the DSLR and execute your program to experience the magic firsthand. Next, realize you just saved hundreds of dollars by using your knock off GameBoy to create a featured intervalometer.</p>
+
+<h1>The extra mile</h1>
+
+<p>The only thing left is that nagging problem of fashioning the calculator to the tripod. Never fear, for I have come to deliver thee from torment. Behold, the device.</p>
+
+<p><img alt="Calculator harness" src="/img/posts/IMG_3097.jpg" /></p>
+
+<p>Disregard that it looks like something from the Tower of London's torture chamber. I constructed this frame from two coat hangers using a pair of pliers. The upturned feet at the bottom gently cups the calculator while the cross bar in the middle keeps it from tilting forward. Hang the hook from any point of the tripod and you're good to go.</p>
+
+<p>This whole thing actually fits in my Canon camera bag, but it's less than ideal for traveling. If you come up with a better idea, tweet it to @beardog and I'll post it here for bragging rights.</p>
+</div>
+	</article>
+
+				</section>
+				<footer class="site-footer span8 offset2 clearfix">
+					<nav>
+						<!-- <a href="http://chrismontrois.com/archives.html">Archives</a> -->
+						<!-- <a href="http://chrismontrois.com/atom.xml">Subscribe</a> -->
+						<a href="/about/">About</a>
+						<a href="/setup/">Setup</a>
+						<a href="mailto:chris@chrismontrois.net">Email</a>
+					</nav>
+					<span>Chris Montrois © 2009-2013</span>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
