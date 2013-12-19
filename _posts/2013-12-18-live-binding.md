@@ -9,9 +9,9 @@ You should never have to reload a web page. Content should be pushed to you as i
 
 Live-binding means your HTML automatically updates to reflect your data. Libraries like AngularJS, React, and EmberJS have made it incredibly easy to make any site dynamic. Consider this AngularJS template:
 
-	{% highlight html %}
-	<p>Current Price: {quote.price}</p>
-	{% endhighlight %}
+{% highlight html %}
+<p>Current Price: {quote.price}</p>
+{% endhighlight %}
 
 This should look familiar if you've worked other JavaScript templates (e.g., Handlebars, Mustache). If you haven't, just think of `quote.price` as a placeholder for the actual price. Normal libraries will render your template once, but AngularJS will re-render it as soon as `quote.price` changes its value. This process of automatically updating the DOM is called live-binding.
 
