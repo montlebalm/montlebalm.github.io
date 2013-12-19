@@ -1,7 +1,7 @@
 ---
 title: "Live Data Binding with AngularJS, React and EmberJS"
 layout: single
-summary: "Our phones are great at being touched, but they suck at touching back"
+summary: "Static web pages are obsolute as soon as they're loaded. Embrace live-binding to breath new life into your web applications."
 ---
 (Originally posted at [MOD/L](http://modl.markit.com/articles/live-data-binding-with-angularjs-react-emberjs/))
 
