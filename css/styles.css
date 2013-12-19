@@ -31,6 +31,10 @@ li {
 	line-height: 1.5em;
 }
 
+a:visited {
+	color: #005580;
+}
+
 /* Layout
 -------------------- */
 
