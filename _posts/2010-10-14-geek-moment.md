@@ -19,26 +19,26 @@ First, we're going to create a controller program on our calculator. If you've f
 
 The actual code provided in the tutorial was a little too basic for my needs. Instead, I used one suggested by "silentfallen" in the posts comments. If you don't know how to get some of these functions, [consult a specialist](http://www.ticalc.org/programming/columns/83plus-bas/cherny/). Here's the code.
 
-	{% highlight c %}
-	Disp "START DELAY?"
-	Prompt A
-	A*333.333 &#x2192; W
-	Disp "HOW OFTEN?"
-	Prompt B
-	B*333.333 &#x2192; X
-	Disp "HOW MANY SHOTS?"
-	Prompt Y
-	For(H,1,W,1)
-	End
-	Send(A)
-	Y-1 &#x2192; Y
-	While Y>0
-	Y-1 &#x2192; Y
-	For(H,1,X,1)
-	End
-	Send(A)
-	End
-	{% endhighlight %}
+{% highlight c %}
+Disp "START DELAY?"
+Prompt A
+A*333.333 &#x2192; W
+Disp "HOW OFTEN?"
+Prompt B
+B*333.333 &#x2192; X
+Disp "HOW MANY SHOTS?"
+Prompt Y
+For(H,1,W,1)
+End
+Send(A)
+Y-1 &#x2192; Y
+While Y>0
+Y-1 &#x2192; Y
+For(H,1,X,1)
+End
+Send(A)
+End
+{% endhighlight %}
 
 I should note that all time inputs will be evaluated in seconds. Thus, an input of "15, 5, 100" will cause the camera to wait 15 seconds and then proceed to take 100 photos with 5 seconds in between each picture.
 
@@ -50,7 +50,7 @@ Connect your calculator to your camera using the link cable and you're done. Tur
 
 The only thing left is that nagging problem of fashioning the calculator to the tripod. Never fear, for I have come to deliver thee from torment. Behold, the device.
 
-![Calculator harness](http://chrismontrois.com/images/posts/calculatortron.jpg)
+![Calculator harness](/images/posts/calculatortron.jpg)
 
 Disregard that it looks like something from the Tower of London's torture chamber. I constructed this frame from two coat hangers using a pair of pliers. The upturned feet at the bottom gently cups the calculator while the cross bar in the middle keeps it from tilting forward. Hang the hook from any point of the tripod and you're good to go.
 

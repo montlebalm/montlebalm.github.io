@@ -16,8 +16,8 @@ body {
 }
 
 blockquote {
-	padding-left: 1.5em;
-	margin: 1.5em 0;
+	padding-left: 1em;
+	margin: 1em 0;
 }
 
 pre,
@@ -26,11 +26,16 @@ code {
 	border: none;
 }
 
+ul,
+li {
+	line-height: 1.5em;
+}
+
 /* Layout
 -------------------- */
 
 .highlight {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 }
 
 .site-wrapper {
@@ -75,19 +80,19 @@ code {
 		/*.site-content article header {}*/
 
 				.site-content article header span {
-						color: #999;
-						margin-top: 20px;
-						font-size: 14px;
+					color: #999;
+					margin-top: 1em;
+					font-size: 14px;
 				}
 
 				.site-content article header h1 {
-						font-size: 2em;
-						line-height: 1em;
-						margin: 0;
+					font-size: 2em;
+					margin-bottom: 0;
+					margin-top: 0;
 				}
 
 				.site-content article header a {
-						text-decoration: none;
+					text-decoration: none;
 				}
 
 		.post-summary {
@@ -97,7 +102,6 @@ code {
 
 	.post-content {
   	font-family: "Roboto Slab", serif;
-  	margin-top: 1.5em;
 	}
 
 		.post-content h1 {
@@ -106,7 +110,7 @@ code {
 		}
 
 		.post-content p {
-			margin-bottom: 1.5em;
+			margin-bottom: 1em;
 		}
 
 		.post-paging {

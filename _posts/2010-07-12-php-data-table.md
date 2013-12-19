@@ -11,26 +11,26 @@ The goal of this project was to create something that would satisfy the need of 
 
 # Code
 
-	{% highlight php %}
-	$table = new Grid();
+{% highlight php %}
+$table = new Grid();
 
-	// Define the columns using "addColumn(dbColumnName, DisplayText)
-	$table->addColumn("id", "ID");
-	$table->addColumn("fName", "First Name");
-	$table->addColumn("lName", "Last Name");
-	$table->addColumn("sex", "Gender");
-	$table->addColumn("age", "Current Age");
-	$table->addColumn("email", "Contact Email");
+// Define the columns using "addColumn(dbColumnName, DisplayText)
+$table->addColumn("id", "ID");
+$table->addColumn("fName", "First Name");
+$table->addColumn("lName", "Last Name");
+$table->addColumn("sex", "Gender");
+$table->addColumn("age", "Current Age");
+$table->addColumn("email", "Contact Email");
 
-	// Format individual columns
-	$table->columns["age"]->textAlign = "center";
-	$table->columns["sex"]->replaceValue("m", "Male");
-	$table->columns["sex"]->replaceValue("f", "Female");
+// Format individual columns
+$table->columns["age"]->textAlign = "center";
+$table->columns["sex"]->replaceValue("m", "Male");
+$table->columns["sex"]->replaceValue("f", "Female");
 
-	// Set the data source for the table and output the html
-	$table->setDataSource($MySqlQueryResult);
-	$table->render();
-	{% endhighlight %}
+// Set the data source for the table and output the html
+$table->setDataSource($MySqlQueryResult);
+$table->render();
+{% endhighlight %}
 
 The first line assigns and instantiates a new Grid object. The next block defines the columns using the database column name and the display text that will appear in the table header.
 

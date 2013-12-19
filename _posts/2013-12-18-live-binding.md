@@ -21,23 +21,23 @@ Data-driven applications are easier to build, easier to maintain, and easier to 
 
 Adding live data to an AngularJS site is trivially easy. Consider this example where the data for our page comes from an API:
 
-	{% highlight javascript %}
-	// Make an HTTP GET request to our API
-	$http.get('/api/timely_quote', function(res) {
-		// Bind the API response to our template scope
-		$scope.quote = res.data;
-	});
-	{% endhighlight %}
+{% highlight javascript %}
+// Make an HTTP GET request to our API
+$http.get('/api/timely_quote', function(res) {
+	// Bind the API response to our template scope
+	$scope.quote = res.data;
+});
+{% endhighlight %}
 
 As soon as `$scope.data` changes value, AngularJS will re-render our template based on the new data. What happens if we wrap the same call in a `setInterval`?
 
-	{% highlight javascript %}
-	setInterval(function() {
-		$http.get('/api/timely_quote', function(res) {
-			$scope.quote = res.data;
-		});
-	}, 5000);
-	{% endhighlight %}
+{% highlight javascript %}
+setInterval(function() {
+	$http.get('/api/timely_quote', function(res) {
+		$scope.quote = res.data;
+	});
+}, 5000);
+{% endhighlight %}
 
 By adding two lines of code our page will automatically update every five-seconds. That's the power of live-binding. The same concepts apply for WebSockets, long-polling, and intra-page user interaction.
 
