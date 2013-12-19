@@ -5,32 +5,32 @@ summary: "Creating a WebForm like table control for PHP"
 ---
 One nice thing about working in ASP.NET is the abundance of pre-made controls. They are convenient, powerful, and can be bound to numerous different data sources. Unfortunately, they are also bloated, slow, and unwieldy. The combined HTML and ViewState of a GridView (ASP.NET Web Control) is enough to drive a conscientious developer mad.
 
-Here is a <a href="http://quickstarts.asp.net/QuickStartv20/aspnet/samples/data/GridViewBoundFields_vb.aspx">GridView demo</a> on the official ASP.NET QuickStart site. I won't post it here, but the ViewState produced by the table is almost 5,000 characters long. If we include server-side sorting, the number jumps up a bit more and requires another call to the database. There are some benefits to the Microsoft, but in the end it feels like too much for too little.
+Here is a [GridView demo](http://quickstarts.asp.net/QuickStartv20/aspnet/samples/data/GridViewBoundFields_vb.aspx) on the official ASP.NET QuickStart site. I won't post it here, but the ViewState produced by the table is almost 5,000 characters long. If we include server-side sorting, the number jumps up a bit more and requires another call to the database. There are some benefits to the Microsoft, but in the end it feels like too much for too little.
 
 The goal of this project was to create something that would satisfy the need of a GridView with a much smaller footprint. I am sure there is a PHP library somewhere bursting with similar functionality, but that wouldn't be much fun.
 
 # Code
 
-{% highlight php %}
-$table = new Grid();
+	{% highlight php %}
+	$table = new Grid();
 
-// Define the columns using "addColumn(dbColumnName, DisplayText)
-$table->addColumn("id", "ID");
-$table->addColumn("fName", "First Name");
-$table->addColumn("lName", "Last Name");
-$table->addColumn("sex", "Gender");
-$table->addColumn("age", "Current Age");
-$table->addColumn("email", "Contact Email");
+	// Define the columns using "addColumn(dbColumnName, DisplayText)
+	$table->addColumn("id", "ID");
+	$table->addColumn("fName", "First Name");
+	$table->addColumn("lName", "Last Name");
+	$table->addColumn("sex", "Gender");
+	$table->addColumn("age", "Current Age");
+	$table->addColumn("email", "Contact Email");
 
-// Format individual columns
-$table->columns["age"]->textAlign = "center";
-$table->columns["sex"]->replaceValue("m", "Male");
-$table->columns["sex"]->replaceValue("f", "Female");
+	// Format individual columns
+	$table->columns["age"]->textAlign = "center";
+	$table->columns["sex"]->replaceValue("m", "Male");
+	$table->columns["sex"]->replaceValue("f", "Female");
 
-// Set the data source for the table and output the html
-$table->setDataSource($MySqlQueryResult);
-$table->render();
-{% endhighlight %}
+	// Set the data source for the table and output the html
+	$table->setDataSource($MySqlQueryResult);
+	$table->render();
+	{% endhighlight %}
 
 The first line assigns and instantiates a new Grid object. The next block defines the columns using the database column name and the display text that will appear in the table header.
 
@@ -52,6 +52,6 @@ If table columns are not explicitly defined, the grid will generate them from th
 
 I'm pleased with the Grid for the amount of time spent developing it. I was able to do some Object Oriented PHP work that helped illustrate some of the differences between it and other languages I've used.
 
-I'm especially happy with the Javascript sorting technique. It provides just the right amount of functionality for this project. The overhead of <a href="http://tablesorter.com/docs/">Tablesorter</a> has been an issue in past. Large tables often result in the "A script on this page is running slowly" dialog.
+I'm especially happy with the Javascript sorting technique. It provides just the right amount of functionality for this project. The overhead of [Tablesorter](http://tablesorter.com/docs/) has been an issue in past. Large tables often result in the "A script on this page is running slowly" dialog.
 
 If I return to this project, I will add support for nested tables. They've been indispensable in several work-related projects and the functionality would be fun to replicate in PHP.

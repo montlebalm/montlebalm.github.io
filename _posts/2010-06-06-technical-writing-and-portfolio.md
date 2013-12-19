@@ -1,9 +1,7 @@
 ---
-published: true
 title: "Technical Writing & Portfolio"
 layout: single
 summary: Stretching the under used literary muscles
-
 ---
 
 I'm going to start with what I've learned. I've learned that staying on top of the web takes time. I've learned that the cutting edge of a corporate intranet is not the same as the cutting edge. I've learned that people lose basic skills when they -- the skills -- are left to atrophy. Mostly, I've learned that the best way to teach yourself is to try and teach someone else.

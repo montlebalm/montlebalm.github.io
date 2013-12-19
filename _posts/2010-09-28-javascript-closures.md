@@ -15,34 +15,34 @@ JavaScript's Lexical scope allows closures to behave in seemingly counter-intuit
 
 I have demonstrated the behavior of closures in the priceless flash card application below.
 
-{% highlight javascript %}
-// Define the outer function
-function flashCard(question, answer) {
+	{% highlight javascript %}
+	// Define the outer function
+	function flashCard(question, answer) {
 
-    // Define our closure to ask the question
-    function ask() {
-        alert("Question: " + question);
-        alert("Answer: " + answer);
-    }
+	    // Define our closure to ask the question
+	    function ask() {
+	        alert("Question: " + question);
+	        alert("Answer: " + answer);
+	    }
 
-    // Return the closure
-    return ask();
+	    // Return the closure
+	    return ask();
 
-}
+	}
 
-// Create a couple flash cards
-var cards = [
-  flashCard("Who was the 2nd president of the United States?", "John Adams"),
-  flashCard("What time is it?", "It's Business Time")
-];
+	// Create a couple flash cards
+	var cards = [
+	  flashCard("Who was the 2nd president of the United States?", "John Adams"),
+	  flashCard("What time is it?", "It's Business Time")
+	];
 
-// Call the closures
-cards[0](); // "Who was the 2nd... "
-cards[1](); // "What time... "
-{% endhighlight %}
+	// Call the closures
+	cards[0](); // "Who was the 2nd... "
+	cards[1](); // "What time... "
+	{% endhighlight %}
 
-If you've been following along you might correctly guess that the first closure call will display the first question/answer (the second call the second question/answer). Again, this is because <span class="code">ask()</span> is executing in the same scope in which it was defined. In this case, its scope includes the question and answer variables that we provided while defining its parent function.
+If you've been following along you might correctly guess that the first closure call will display the first question/answer (the second call the second question/answer). Again, this is because `ask()` is executing in the same scope in which it was defined. In this case, its scope includes the question and answer variables that we provided while defining its parent function.
 
 Closures probably won't change your life, but they have some interesting uses.
 
-For more information about practical application, read <a href="http://www.crockford.com/javascript/private.html">Douglas Crockford's piece on Private Members in JavaScript</a>.
+For more information about practical application, read [Douglas Crockford's piece on Private Members in JavaScript](http://www.crockford.com/javascript/private.html).

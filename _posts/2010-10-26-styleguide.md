@@ -7,20 +7,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 > Nullam vel felis lorem, eu dictum nisi. Morbi convallis convallis dolor nec condimentum. Donec ut nulla purus, id *fringilla dui*. Aenean nec tortor a velit suscipit condimentum.
 
-Morbi imperdiet ullamcorper vulputate. Mauris non dolor a nunc feugiat dapibus. Donec id arcu enim, vitae rutrum ipsum. Duis nec nisl ut lacus rhoncus ornare in at ipsum. Ut in enim et dolor vulputate rutrum. Ut nulla turpis, cursus a luctus ac, ullamcorper pulvinar libero. Maecenas condimentum <a href="http://chrismontrois.net/">purus nec lorem</a> ullamcorper elementum. Curabitur et quam consectetur eros semper porta. Vivamus ornare, ante at eleifend accumsan, dolor arcu mattis tellus, et hendrerit enim enim faucibus augue.
+Morbi imperdiet ullamcorper vulputate. Mauris non dolor a nunc feugiat dapibus. Donec id arcu enim, vitae rutrum ipsum. Duis nec nisl ut lacus rhoncus ornare in at ipsum. Ut in enim et dolor vulputate rutrum. Ut nulla turpis, cursus a luctus ac, ullamcorper pulvinar libero. Maecenas condimentum [purus nec lorem](/) ullamcorper elementum. Curabitur et quam consectetur eros semper porta. Vivamus ornare, ante at eleifend accumsan, dolor arcu mattis tellus, et hendrerit enim enim faucibus augue.
 
 # Vivamus sodales metus ac erat eleifend ullamcorper
 
 Aenean non tellus mi. Morbi vestibulum congue dui id rutrum. Integer odio eros, pellentesque vitae lobortis vel, semper nec quam. Nulla facilisis:
 
-{% highlight python %}
-// Donec et est rutrum nisi vulputate rhoncus sed ac dui
-function MolestieTellus(ut):
-    if (ut < 2)
-        return ut; // bibendum
-    else
-        return MolestieTellus(ut - 1) + MolestieTellus(ut - 2);
-{% endhighlight %}
+	// Donec et est rutrum nisi vulputate rhoncus sed ac dui
+	function MolestieTellus(ut):
+	    if (ut < 2)
+	        return ut; // bibendum
+	    else
+	        return MolestieTellus(ut - 1) + MolestieTellus(ut - 2);
 
 Curabitur placerat laoreet arcu, facilisis pretium augue elementum at. Suspendisse vel pulvinar massa. Nulla consectetur mollis pretium. Aliquam et dui vitae velit egestas venenatis quis ut magna.
 
