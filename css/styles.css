@@ -83,6 +83,7 @@ code {
 				.site-content article header h1 {
 						font-size: 2em;
 						line-height: 1em;
+						margin: 0;
 				}
 
 				.site-content article header a {
@@ -96,6 +97,7 @@ code {
 
 	.post-content {
   	font-family: "Roboto Slab", serif;
+  	margin-top: 1.5em;
 	}
 
 		.post-content h1 {
