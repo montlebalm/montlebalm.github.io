@@ -15,7 +15,7 @@ Luckily, I already had everything I needed to assemble this geek golem. Specific
 
 # Step 1: Cultivate the mind
 
-First, we're going to create a controller program on our calculator. If you've forgotten how to create a new application I'll jog your memory. Simply hit the <span class="code">PRGM</span> key, hit the right arrow twice, and press <span class="code">ENTER</span>. Call it whatever you like so long as you can tell it apart from that quadratic equation program you made to cheat on your algebra test.
+First, we're going to create a controller program on our calculator. If you've forgotten how to create a new application I'll jog your memory. Simply hit the `PRGM` key, hit the right arrow twice, and press `ENTER`. Call it whatever you like so long as you can tell it apart from that quadratic equation program you made to cheat on your algebra test.
 
 The actual code provided in the tutorial was a little too basic for my needs. Instead, I used one suggested by "silentfallen" in the posts comments. If you don't know how to get some of these functions, <a href="http://www.ticalc.org/programming/columns/83plus-bas/cherny/">consult a specialist</a>. Here's the code.
 
@@ -50,7 +50,7 @@ Connect your calculator to your camera using the link cable and you're done. Tur
 
 The only thing left is that nagging problem of fashioning the calculator to the tripod. Never fear, for I have come to deliver thee from torment. Behold, the device.
 
-<img alt="Calculator harness" src="http://chrismontrois.com/images/IMG_3097.jpg" />
+![Calculator harness](http://chrismontrois.com/images/posts/calculatortron.jpg)
 
 Disregard that it looks like something from the Tower of London's torture chamber. I constructed this frame from two coat hangers using a pair of pliers. The upturned feet at the bottom gently cups the calculator while the cross bar in the middle keeps it from tilting forward. Hang the hook from any point of the tripod and you're good to go.
 

@@ -3,7 +3,7 @@ title: "I <3 Valkyria Chronicles"
 layout: single
 summary: ""
 ---
-<img alt="Valkyria" src="http://chrismontrois.com/images/Valk_hero.jpg" />
+![Valkyria](http://chrismontrois.com/images/posts/valkyria-chronicles.jpg)
 
 Valkyria Chronicles is a squad-based, tactical, turn-by-turn, action RPG, shooter.
 
