@@ -33,11 +33,12 @@ As soon as `$scope.data` changes value, AngularJS will re-render our template ba
 		});
 	}, 5000);
 
-With just two lines of code our page is automatically updating every five-seconds. That's the power of live-binding. The same concepts apply for WebSockets, long-polling, and intra-page user interaction.
+By adding two lines of code our page will automatically update every five-seconds. That's the power of live-binding. The same concepts apply for WebSockets, long-polling, and intra-page user interaction.
 
 Static pages are obsolete as soon as they're loaded. They're functionally equivalent to a printed copy. The future of the web is one of live, vibrant pages that tell the user what's happening before they ask. Stop building zombies and start working towards a more user friendly web.
 
 Resources
-- React: http://facebook.github.io/react/
-- AngularJS: http://angularjs.org/
-- EmberJS: http://emberjs.com/
+
+- [React](http://facebook.github.io/react/)
+- [AngularJS](http://angularjs.org/)
+- [EmberJS](http://emberjs.com/)
