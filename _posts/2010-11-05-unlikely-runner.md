@@ -7,7 +7,7 @@ For years I willfully accepted the role of the powerful athlete that cared littl
 
 Everything changed one month ago when I bought my wife a pair of [Vibram Five Finger](http://www.vibramfivefingers.com/products/products_bikila_f.cfm?CFID=6894564&CFTOKEN=30256168) shoes. We'd heard of them through a mutual friend and she'd like the idea of getting away from high tech running gear. As a lifelong evader of distance sports, it made sense for me to get a pair as well. Now, as daft as it sounds, I did have a plan.
 
-!["Bikilas in blue"](/images/posts/vibram-bilika.jpg)
+![Bikilas in blue](/images/posts/vibram-bikila.jpg)
 
 These shoes have an introductory period that requires you to start out running short distances to avoid straining your calves. This early period was my only chance of keeping up with my wife as she routinely heads out for runs beyond my imagination. In my mind, she crosses state borders like sidewalk cracks and turns around when she hits the antipodal coast.
 
