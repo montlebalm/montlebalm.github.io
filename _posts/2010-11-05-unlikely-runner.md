@@ -5,9 +5,9 @@ summary: "Venturing into the running world despite a lack of talent and ability"
 ---
 For years I willfully accepted the role of the powerful athlete that cared little for extended stamina. I easily dismissed emails promising me that which I lacked (for a mere $9.99) and focused my will on strength based exercises involving triceps and latissimus dorsi. My fast twitch muscles were primed for the opportunity to elevate some reluctant ballast for a mere five seconds and promptly pass out.
 
-Everything changed one month ago when I bought my wife a pair of <a href="http://www.vibramfivefingers.com/products/products_bikila_f.cfm?CFID=6894564&CFTOKEN=30256168">Vibram Five Finger</a> shoes. We'd heard of them through a mutual friend and she'd like the idea of getting away from high tech running gear. As a lifelong evader of distance sports, it made sense for me to get a pair as well. Now, as daft as it sounds, I did have a plan.
+Everything changed one month ago when I bought my wife a pair of [Vibram Five Finger](http://www.vibramfivefingers.com/products/products_bikila_f.cfm?CFID=6894564&CFTOKEN=30256168) shoes. We'd heard of them through a mutual friend and she'd like the idea of getting away from high tech running gear. As a lifelong evader of distance sports, it made sense for me to get a pair as well. Now, as daft as it sounds, I did have a plan.
 
-<img alt="Bikilas in blue" src="http://chrismontrois.com/images/5072141810_dfaa1630be_b.jpg" />
+!["Bikilas in blue"](http://chrismontrois.com/images/vibram-bilika.jpg)
 
 These shoes have an introductory period that requires you to start out running short distances to avoid straining your calves. This early period was my only chance of keeping up with my wife as she routinely heads out for runs beyond my imagination. In my mind, she crosses state borders like sidewalk cracks and turns around when she hits the antipodal coast.
 
