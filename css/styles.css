@@ -1,12 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+/* HTML
+-------------------- */
+
 html,
 body {
 	height: 100%;
 }
 
 body {
-	font-size: 22px;
+	font-size: 18px;
   background: url(../images/site/bg_grid.png);
-  font-family: "PT sans", sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 blockquote {
@@ -14,7 +20,9 @@ blockquote {
 	margin: 1.5em 0;
 }
 
-pre {
+pre,
+code {
+	margin: 0;
 	border: none;
 }
 
@@ -43,7 +51,7 @@ pre {
 	}
 
 	.site-header nav {
-			float: left;
+		float: left;
 	}
 
 		.site-header nav a {
@@ -53,70 +61,74 @@ pre {
 		}
 
 .site-content {
-		line-height: 1.5em;
+	line-height: 1.5em;
 }
 
-		.site-content article {
-				clear: both;
-		}
+	.site-content article {
+		clear: both;
+	}
 
-		.site-content article + article {
-				margin-top: 50px;
-		}
+	.site-content article + article {
+		margin-top: 50px;
+	}
 
-				/*.site-content article header {}*/
+		/*.site-content article header {}*/
 
-						.site-content article header span {
-								color: #999;
-								margin-top: 20px;
-								font-size: 14px;
-						}
+				.site-content article header span {
+						color: #999;
+						margin-top: 20px;
+						font-size: 14px;
+				}
 
-						.site-content article header h1 {
-								font-size: 2em;
-								line-height: 1em;
-						}
+				.site-content article header h1 {
+						font-size: 2em;
+						line-height: 1em;
+				}
 
-						.site-content article header a {
-								text-decoration: none;
-						}
+				.site-content article header a {
+						text-decoration: none;
+				}
 
 		.post-summary {
-				margin-bottom: 20px;
-				color: #999;
+			margin-bottom: 20px;
+			color: #999;
 		}
 
+	.post-content {
+  	font-family: "Roboto Slab", serif;
+	}
+
 		.post-content h1 {
-				font-size: 1em;
-				line-height: normal;
+			font-size: 1em;
+			line-height: normal;
 		}
 
 		.post-content p {
-				margin-bottom: 1.5em;
+			margin-bottom: 1.5em;
 		}
 
 		.post-paging {
-				clear: both;
+			clear: both;
 		}
 
 .site-footer {
-		margin-top: 50px;
-		color: #999;
-		clear: both;
-		padding-bottom: 50px;
+	margin-top: 50px;
+	color: #999;
+	clear: both;
+	padding-bottom: 50px;
 }
 
-		.site-footer nav {
-				float: left;
-		}
+	.site-footer nav {
+		float: left;
+	}
 
-		.site-footer a {
-				margin-right: 20px;
-		}
+	.site-footer a {
+		margin-right: 20px;
+	}
 
-		.site-footer span {
-				float: right;
-		}
+	.site-footer span {
+		float: right;
+	}
 
 /* Responsive
 -------------------- */
