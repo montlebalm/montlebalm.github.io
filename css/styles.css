@@ -15,7 +15,8 @@ blockquote {
 }
 
 pre {
-	margin-bottom: 20px;
+	margin-bottom: 1.5em;
+	border: none;
 }
 
 /* Layout
