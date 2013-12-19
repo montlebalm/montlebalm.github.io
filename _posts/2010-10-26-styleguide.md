@@ -13,12 +13,14 @@ Morbi imperdiet ullamcorper vulputate. Mauris non dolor a nunc feugiat dapibus. 
 
 Aenean non tellus mi. Morbi vestibulum congue dui id rutrum. Integer odio eros, pellentesque vitae lobortis vel, semper nec quam. Nulla facilisis:
 
+	{% highlight python %}
 	// Donec et est rutrum nisi vulputate rhoncus sed ac dui
 	function MolestieTellus(ut):
 	    if (ut < 2)
 	        return ut; // bibendum
 	    else
 	        return MolestieTellus(ut - 1) + MolestieTellus(ut - 2);
+	{% endhighlight %}
 
 Curabitur placerat laoreet arcu, facilisis pretium augue elementum at. Suspendisse vel pulvinar massa. Nulla consectetur mollis pretium. Aliquam et dui vitae velit egestas venenatis quis ut magna.
 

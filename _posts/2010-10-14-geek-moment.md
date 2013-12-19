@@ -19,6 +19,7 @@ First, we're going to create a controller program on our calculator. If you've f
 
 The actual code provided in the tutorial was a little too basic for my needs. Instead, I used one suggested by "silentfallen" in the posts comments. If you don't know how to get some of these functions, [consult a specialist](http://www.ticalc.org/programming/columns/83plus-bas/cherny/). Here's the code.
 
+	{% highlight c %}
 	Disp "START DELAY?"
 	Prompt A
 	A*333.333 &#x2192; W
@@ -37,6 +38,7 @@ The actual code provided in the tutorial was a little too basic for my needs. In
 	End
 	Send(A)
 	End
+	{% endhighlight %}
 
 I should note that all time inputs will be evaluated in seconds. Thus, an input of "15, 5, 100" will cause the camera to wait 15 seconds and then proceed to take 100 photos with 5 seconds in between each picture.
 
