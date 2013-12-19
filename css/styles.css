@@ -15,12 +15,15 @@ blockquote {
 }
 
 pre {
-	margin-bottom: 1.5em;
 	border: none;
 }
 
 /* Layout
 -------------------- */
+
+.highlight {
+	margin-bottom: 1.5em;
+}
 
 .site-wrapper {
 	margin-left: 40px;
