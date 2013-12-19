@@ -5,7 +5,7 @@ body {
 
 body {
 	font-size: 22px;
-  background: url(../img/site/bg_grid.png);
+  background: url(../images/site/bg_grid.png);
   font-family: "PT sans", sans-serif;
 }
 
@@ -34,7 +34,7 @@ pre {
 		height: 75px;
 		width: 50px;
 		float: left;
-  	background: url(../img/site/logo_large.png) no-repeat;
+  	background: url(../images/site/logo_large.png) no-repeat;
 		background-size: 50px 75px;
 	}
 
