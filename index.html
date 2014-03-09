@@ -2,16 +2,29 @@
 layout: default
 ---
 
-{% for post in site.posts limit:20 %}
-
-	<article class="clearfix">
-		<header class="clearfix">
-			<span class="span2">{{ post.date | date:"%d %b %Y" }}</span>
-			<h1 class="span8">
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</h1>
-		</header>
-		<div class="post-content span8 offset2">{{ post.summary }}</div>
-	</article>
-
-{% endfor %}
+<header class="site-header row">
+  <div class="span2">
+    <a href="/" accesskey="1" class="site-logo"></a>
+  </div>
+  <div class="span8">
+	  <h1>Hello there</h1>
+    <p>My name is Chris Montrois and I'm a Web Developer in Lafayette, Colorado.</p>
+		<p>I've been known to tweet on <a href="http://twitter.com/#!/montlebalm">Twitter</a>, liason on <a href="http://www.linkedin.com/pub/chris-montrois/9/4b1/b4a">LinkedIn</a>, git on <a href="https://github.com/montlebalm">GitHub</a>, and fine-tune <a href="http://www.flickr.com/photos/chrismontrois/">Flickr</a> photos.</p>
+		<p>Ocassionally I write things down. You can find some of my recent posts if you look down just a bit.</p>
+  </div>
+</header>
+<section class="site-content">
+	{% for post in site.posts limit:20 %}
+		<article>
+			<header class="row">
+				<span class="date span2">{{ post.date | date:"%d %b %Y" }}</span>
+				<h1 class="span8">
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				</h1>
+			</header>
+			<div class="post-content row">
+				<p class="span8 offset2">{{ post.summary }}</p>
+			</div>
+		</article>
+	{% endfor %}
+</section>

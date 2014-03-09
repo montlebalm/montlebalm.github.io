@@ -1,10 +1,15 @@
 {% include header.html %}
-
-	<article class="clearfix">
-    <header class="clearfix">
-      <h1 class="span8 offset2">{{ page.title }}</h1>
-    </header>
-    <div class="post-content span8 offset2">{{ content }}</div>
-  </article>
-
+	<div class="row">
+		<header class="site-header span2">
+			<a href="/" accesskey="1" class="site-logo"></a>
+		</header>
+		<section class="site-content span8">
+			<article class="row">
+		    <header class="span8">
+		      <h1>{{ page.title }}</h1>
+		    </header>
+		    <div class="post-content span8">{{ content }}</div>
+		  </article>
+		</section>
+	</div>
 {% include footer.html %}

@@ -35,12 +35,13 @@ a:visited {
 	color: #005580;
 }
 
+p {
+	font-family: "Roboto Slab", serif;
+	line-height: 1.5em;
+}
+
 /* Layout
 -------------------- */
-
-.highlight {
-	margin-bottom: 1em;
-}
 
 .site-wrapper {
 	margin-left: 40px;
@@ -48,40 +49,29 @@ a:visited {
 
 .site-header {
 	padding-top: 40px;
-	margin-bottom: 50px;
 }
 
 	.site-header .site-logo {
-		height: 75px;
-		width: 50px;
-		float: left;
+		height: 120px;
+		width: 80px;
+		display: block;
   	background: url(../images/site/logo_large.png) no-repeat;
-		background-size: 50px 75px;
+		background-size: 80px 120px;
 	}
 
-	.site-header nav {
-		float: left;
-	}
-
-		.site-header nav a {
-			font-size: 20px;
-			line-height: 75px;
-			margin: 0 20px 0 0;
+		.site-header h1 {
+			margin-bottom: 0;
 		}
 
 .site-content {
 	line-height: 1.5em;
+	margin-top: 50px;
 }
 
 	.site-content article {
+		margin-bottom: 25px;
 		clear: both;
 	}
-
-	.site-content article + article {
-		margin-top: 50px;
-	}
-
-		/*.site-content article header {}*/
 
 				.site-content article header span {
 					color: #999;
@@ -99,14 +89,7 @@ a:visited {
 					text-decoration: none;
 				}
 
-		.post-summary {
-			margin-bottom: 20px;
-			color: #999;
-		}
-
-	.post-content {
-  	font-family: "Roboto Slab", serif;
-	}
+	/*.post-content {}*/
 
 		.post-content h1 {
 			font-size: 1em;
@@ -114,37 +97,30 @@ a:visited {
 			margin-bottom: 1em;
 		}
 
+		.post-content .highlight {
+			margin-bottom: 1em;
+		}
+
 		.post-content p {
 			margin-bottom: 1em;
 		}
 
-		.post-paging {
-			clear: both;
-		}
-
 .site-footer {
-	margin-top: 50px;
 	color: #999;
-	clear: both;
 	padding-bottom: 50px;
 }
-
-	.site-footer nav {
-		float: left;
-	}
-
-	.site-footer a {
-		margin-right: 20px;
-	}
-
-	.site-footer span {
-		float: right;
-	}
 
 /* Responsive
 -------------------- */
 
 @media (max-width: 767px) {
+
+	.site-logo {
+		margin-left: -40px;
+		position: relative;
+		left: 50%;
+		margin-bottom: 50px;
+	}
 
 	.site-wrapper {
 		margin-left: 0;
@@ -154,4 +130,7 @@ a:visited {
 		margin-bottom: 0;
 	}
 
+	.site-content header .date {
+		margin-top: 0;
+	}
 }
