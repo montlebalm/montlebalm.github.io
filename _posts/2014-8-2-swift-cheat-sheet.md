@@ -4,12 +4,12 @@ layout: single
 summary: "Tips and tricks for manipulating strings in Swift."
 ---
 
-Manipulating strings can be a little cumbersome in Swift. Here's a handful of
-common procedures you'll likely run into.
+Sometimes manipulating strings can be a little cumbersome in Swift. Here's a handful of
+techniques you might find useful.
 
 ### Split
 
-Split a given string into an array of strings (one index for each character).
+Split a string into an.
 
 ```swift
 func splitString(input: String) -> [String] {
@@ -25,7 +25,7 @@ let letters = splitString("abcdefg")
 
 ### Trim whitespace
 
-Pull out all the leading/trailing whitespace from a string.
+Remove all leading and trailing whitespace from a string.
 
 ```swift
 let spaceSet = NSCharacterSet.whitespaceCharacterSet()
@@ -59,7 +59,7 @@ let clean = input.stringByReplacingOccurrencesOfString(
 
 ### Remove duplicate whitespace
 
-Similar to the above, we can use `RegularExpressionSearch` to remove duplicate whitespace characters.
+We can also use `RegularExpressionSearch` to remove duplicate whitespace characters.
 
 ```swift
 let fitted = "Too    much".stringByReplacingOccurrencesOfString(
