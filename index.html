@@ -6,7 +6,7 @@ layout: default
   <div class="span2">
     <a href="/" accesskey="1" class="site-logo"></a>
   </div>
-  <div class="span8">
+  <div class="span10">
 	  <h1>Hello there</h1>
     <p>My name is Chris Montrois and I'm a Web Developer in Lafayette, Colorado.</p>
 		<p>I've been known to tweet on <a href="http://twitter.com/#!/montlebalm">Twitter</a>, liason on <a href="http://www.linkedin.com/pub/chris-montrois/9/4b1/b4a">LinkedIn</a>, git on <a href="https://github.com/montlebalm">GitHub</a>, and fine-tune <a href="http://www.flickr.com/photos/chrismontrois/">Flickr</a> photos.</p>
@@ -18,12 +18,12 @@ layout: default
 		<article>
 			<header class="row">
 				<span class="date span2">{{ post.date | date:"%d %b %Y" }}</span>
-				<h1 class="span8">
+				<h1 class="span10">
 					<a href="{{ post.url }}">{{ post.title }}</a>
 				</h1>
 			</header>
 			<div class="post-content row">
-				<p class="span8 offset2">{{ post.summary }}</p>
+				<p class="span10 offset2">{{ post.summary }}</p>
 			</div>
 		</article>
 	{% endfor %}
