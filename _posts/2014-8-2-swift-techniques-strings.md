@@ -93,10 +93,8 @@ Get a substring from index X to index Y.
 
 ```swift
 let haystack = "Where's Waldo hiding?"
-let startIndex = advance(haystack.startIndex, 8)
-let endIndex = advance(startIndex, 5)
-let range = Range(start: startIndex, end: endIndex)
-let needle = haystack.substringWithRange(range)
+let range = haystack.rangeOfString("Waldo")
+let needle = haystack.substringWithRange(range!)
 // needle == "Waldo"
 ```
 
