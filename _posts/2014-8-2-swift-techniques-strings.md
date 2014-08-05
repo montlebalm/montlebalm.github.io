@@ -9,7 +9,7 @@ techniques you might find useful.
 
 ### Split
 
-Split a string into an.
+Split a string into an array.
 
 ```swift
 func splitString(input: String) -> [String] {
