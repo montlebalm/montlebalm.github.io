@@ -12,15 +12,9 @@ techniques you might find useful.
 Split a string into an array.
 
 ```swift
-func splitString(input: String) -> [String] {
-	var split = [String]()
-	for char in input {
-		split.append(String(char))
-	}
-	return split
-}
-let letters = splitString("abcdefg")
-// letters = ["a", "b", "c", "d", "e", "f", "g"]
+let text = "abc123"
+let letters = Array(text)
+// letters = ["a", "b", "c", "1", "2", "3"]
 ```
 
 ### Trim whitespace
