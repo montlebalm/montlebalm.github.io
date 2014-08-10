@@ -17,6 +17,17 @@ let letters = Array(text)
 // letters = ["a", "b", "c", "1", "2", "3"]
 ```
 
+### Sort string
+
+First, we'll split the string, then sort it, then join back together. In this example, I'm mapping the `Array<Character>` to `Array<String>` so it can be sorted easier. It's possible this isn't necessary, but I've yet to find a better way.
+
+```swift
+let text = "zxy321"
+let letters = Array(text).map({ String($0) })
+let sortedText = join("", letters.sorted())
+// sortedText = "123xyz"
+```
+
 ### Trim whitespace
 
 Remove all leading and trailing whitespace from a string.
