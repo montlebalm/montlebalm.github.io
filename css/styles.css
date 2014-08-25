@@ -79,7 +79,7 @@ p {
       margin-bottom: 1em;
     }
 
-      .site-content article header span {
+      .site-content article header .date {
         color: #999;
         margin-top: 1em;
         font-size: 14px;
@@ -115,6 +115,25 @@ p {
   color: #999;
   padding-bottom: 50px;
 }
+
+/* Icons
+-------------------- */
+
+.site-icon {
+  background-repeat: no-repeat;
+  background-size: 2.75em;
+  display: inline-block;
+  height: .75em;
+  width: .75em;
+}
+
+  .site-icon[data-site=modl] {
+    background-image: url(/images/site/sites/modl_logo.png);
+  }
+
+  .site-icon[data-site=quickleft] {
+    background-image: url(/images/site/sites/quickleft_logo.png);
+  }
 
 /* Responsive
 -------------------- */
