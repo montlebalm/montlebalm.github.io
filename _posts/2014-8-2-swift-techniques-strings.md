@@ -1,7 +1,7 @@
 ---
 title: "Swift Techniques: Strings"
 layout: single
-summary: "Tips and tricks for manipulating strings in Swift."
+summary: "Tips and tricks for manipulating strings in Swift"
 ---
 
 Sometimes manipulating strings can be a little cumbersome in Swift. Here's a handful of
