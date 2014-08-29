@@ -4,8 +4,9 @@ body {
 }
 
 body {
-  font-size: 18px;
   background: url(../images/site/bg_grid.png);
+  font-family: Georgia, serif;
+  font-size: 18px;
 }
 
 blockquote {
@@ -35,6 +36,16 @@ p {
   line-height: 1.4em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Verdana, sans-serif;
+  letter-spacing: -1px;
+}
+
 /* Layout
 -------------------- */
 
@@ -46,7 +57,7 @@ p {
 
   .site-header .site-logo {
     background: url(../images/site/logo_large.png) no-repeat;
-    background-size: 80px 120px;
+    background-size: 100%;
     display: block;
     height: 120px;
     width: 80px;
@@ -67,16 +78,24 @@ p {
     margin-bottom: 25px;
   }
 
-    .site-content article header .post-date {
+    .site-content .post-date {
       margin-top: .75em;
     }
 
-    .site-content article header h1 {
+      .site-content .post-date .long {
+        display: inline;
+      }
+
+      .site-content .post-date .short {
+        display: none;
+      }
+
+    .site-content h1 {
       font-size: 2em;
       margin: 0 0 .25em 0;
     }
 
-    .site-content article header a {
+    .site-content a {
       text-decoration: none;
     }
 
@@ -108,7 +127,6 @@ p {
 
   .post-content p,
   .post-content ul {
-    font-family: Palatino, Georgia, "Times New Roman", serif;
     margin-bottom: 1em;
   }
 
@@ -149,17 +167,32 @@ p {
 /* Responsive
 -------------------- */
 
-@media (max-width: 767px) {
+@media only screen and (max-width: 992px) {
 
-  .site-logo {
-    left: 50%;
-    margin-bottom: 50px;
-    margin-left: -40px;
-    position: relative;
+  .site-content .post-date .long {
+    display: none;
   }
 
-  .site-wrapper {
-    margin-left: 0;
+  .site-content .post-date .short {
+    display: inline;
+  }
+
+}
+
+@media only screen and (max-width: 320px) {
+  
+  .site-header .site-logo {
+    height: 240px;
+    left: 50%;
+    margin-bottom: 50px;
+    margin-left: -80px;
+    position: relative;
+    width: 160px;
+  }
+
+  .site-content h1 {
+    font-size: 1.5em;
+    margin-top: 5px;
   }
 
   .site-header {
@@ -171,3 +204,4 @@ p {
   }
 
 }
+
