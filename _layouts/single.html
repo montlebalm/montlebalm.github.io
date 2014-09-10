@@ -1,19 +1,22 @@
 {% include header.html %}
 
-	<div class="row">
-		<header class="site-header post-detail col-md-2">
-			<a href="/" accesskey="1" class="site-logo"></a>
-      <p class="post-date">{{ page.date | date:"%d %b %Y" }}</p>
+  <div class="row">
+    <header class="site-header post-detail col-sm-2">
+      <a href="/" accesskey="1" class="site-logo"></a>
+      <p class="post-date">
+        <span class="long">{{ page.date | date:"%d %b %Y" }}</span>
+        <span class="short">{{ page.date | date:"%D" }}</span>
+      </p>
       <p class="post-summary">{{ page.summary }}</p>
-		</header>
-		<section class="site-content col-md-10">
-			<article class="row">
-		    <header class="col-md-10">
-		      <h1>{{ page.title }}</h1>
-		    </header>
-		    <div class="post-content col-md-10">{{ content }}</div>
-		  </article>
-		</section>
-	</div>
+    </header>
+    <section class="site-content col-sm-10">
+      <article>
+        <header>
+          <h1>{{ page.title }}</h1>
+        </header>
+        <div class="post-content">{{ content }}</div>
+      </article>
+    </section>
+  </div>
 
 {% include footer.html %}
