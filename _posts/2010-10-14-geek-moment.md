@@ -13,7 +13,7 @@ I know.
 
 Luckily, I already had everything I needed to assemble this geek golem. Specifically, it requires a DSLR camera with a remote shutter release socket (preferably 2.5mm), a Texas Instruments graphing calculator, and a 2.5mm link cable.
 
-# Step 1: Cultivate the mind
+## Step 1: Cultivate the mind
 
 First, we're going to create a controller program on our calculator. If you've forgotten how to create a new application I'll jog your memory. Simply hit the `PRGM` key, hit the right arrow twice, and press `ENTER`. Call it whatever you like so long as you can tell it apart from that quadratic equation program you made to cheat on your algebra test.
 
@@ -42,11 +42,11 @@ End
 
 I should note that all time inputs will be evaluated in seconds. Thus, an input of "15, 5, 100" will cause the camera to wait 15 seconds and then proceed to take 100 photos with 5 seconds in between each picture.
 
-# There is no step 2
+## There is no step 2
 
 Connect your calculator to your camera using the link cable and you're done. Turn on the DSLR and execute your program to experience the magic firsthand. Next, realize you just saved hundreds of dollars by using your knock off GameBoy to create a featured intervalometer.
 
-# The extra mile
+## The extra mile
 
 The only thing left is that nagging problem of fashioning the calculator to the tripod. Never fear, for I have come to deliver thee from torment. Behold, the device.
 

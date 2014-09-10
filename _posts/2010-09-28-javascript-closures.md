@@ -1,15 +1,15 @@
 ---
-title: "Javascript Closures"
+title: "JavaScript Closures"
 layout: single
 summary: "Demonstrating the behavior of JavaScript closures"
 ---
-> "Javascript functions are a combination of code to be executed and the scope in which to execute them. This combination of code and scope is known as a closure..."
+> "JavaScript functions are a combination of code to be executed and the scope in which to execute them. This combination of code and scope is known as a closure..."
 
-> Excerpt from *Javascript: The Definitive Guide* by David Flanagan
+> Excerpt from *JavaScript: The Definitive Guide* by David Flanagan
 
 The basic definition of a closure is a function defined within a function. The behavior of these nested functions differs between programming languages based on their handling of scope. JavaScript employs a Lexical (static) scope, which means functions execute in the same context in which they are defined. Unlike dynamically scoped languages, JavaScript not only contains a pointer to the nested function, but a reference to its call object as well.
 
-# Call object: forget me not
+## Call object: forget me not
 
 JavaScript's Lexical scope allows closures to behave in seemingly counter-intuitive ways. Normally when a function exits, the interpreter releases its useless call object for garbage collection. However, if we set a nested function as the return value of a parent function, the interpreter must keep a reference to the parent's call object. This is required in order to provide the nested function with the scope in which it was defined. We can't access the stored object directly, but it will persist in memory until needed.
 
@@ -20,8 +20,8 @@ I have demonstrated the behavior of closures in the priceless flash card applica
 function flashCard(question, answer) {
   // Define our closure to ask the question
   function ask() {
-      alert("Question: " + question);
-      alert("Answer: " + answer);
+    alert("Question: " + question);
+    alert("Answer: " + answer);
   }
 
   // Return the closure

@@ -9,7 +9,7 @@ Here is a [GridView demo](http://quickstarts.asp.net/QuickStartv20/aspnet/sample
 
 The goal of this project was to create something that would satisfy the need of a GridView with a much smaller footprint. I am sure there is a PHP library somewhere bursting with similar functionality, but that wouldn't be much fun.
 
-# Code
+## Code
 
 {% highlight php %}
 $table = new Grid();
@@ -40,7 +40,7 @@ The next two lines allow for a table value to be replaced with a given string. I
 
 The last lines of code tell the Grid what MySQL query to use and then to output the HTML. The result is clean, semantic markup.
 
-# Grid Features
+## Grid Features
 
 The Grid comes with it's own internal stylesheet but users can override it by changing the Grid object's css class name.
 
@@ -48,7 +48,7 @@ jQuery based column sorting is enabled by default and runs smoothly even on larg
 
 If table columns are not explicitly defined, the grid will generate them from the MySQL query columns. In that instance, column configuration would not be available as the column array is defined at output.
 
-# Future
+## Future
 
 I'm pleased with the Grid for the amount of time spent developing it. I was able to do some Object Oriented PHP work that helped illustrate some of the differences between it and other languages I've used.
 

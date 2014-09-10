@@ -7,7 +7,7 @@ summary: "Tips and tricks for manipulating strings in Swift"
 Sometimes manipulating strings can be a little cumbersome in Swift. Here's a handful of
 techniques you might find useful.
 
-### Split
+## Split
 
 Split a string into an array.
 
@@ -17,7 +17,7 @@ let letters = Array(text)
 // letters = ["a", "b", "c", "1", "2", "3"]
 ```
 
-### Sort string
+## Sort string
 
 First, we'll split the string, then sort it, then join back together. In this example, I'm mapping the `Array<Character>` to `Array<String>` so it can be sorted easier. It's possible this isn't necessary, but I've yet to find a better way.
 
@@ -28,7 +28,7 @@ let sortedText = join("", letters.sorted())
 // sortedText = "123xyz"
 ```
 
-### Trim whitespace
+## Trim whitespace
 
 Remove all leading and trailing whitespace from a string.
 
@@ -49,7 +49,7 @@ sets](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foun
 In addition, you can get the opposite of any character set by adding `.inverted`
 to the end.
 
-### Remove substrings
+## Remove substrings
 
 Remove all occurrences of a substring by using a regular expression.
 
@@ -62,7 +62,7 @@ let clean = input.stringByReplacingOccurrencesOfString(
 // clean == "Pass the salsa  please"
 ```
 
-### Remove duplicate whitespace
+## Remove duplicate whitespace
 
 We can also use `RegularExpressionSearch` to remove duplicate whitespace characters.
 
@@ -74,7 +74,7 @@ let fitted = "Too    much".stringByReplacingOccurrencesOfString(
 // fitted == "Too much"
 ```
 
-### Substring
+## Substring
 
 Get a substring starting from the beginning of the string until index X.
 
@@ -103,7 +103,7 @@ let needle = haystack.substringWithRange(range!)
 // needle == "Waldo"
 ```
 
-### Prefix/suffix
+## Prefix/suffix
 
 Check whether a string starts with a given substring.
 
@@ -121,7 +121,7 @@ if "Dude, I know".hasPrefix("Dude") {
 }
 ```
 
-### Check for substring
+## Check for substring
 
 Find the range of a string inside another string. This can also act as a Regex `test` method when passed the `.RegularExpressionSearch` option.
 

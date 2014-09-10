@@ -5,7 +5,8 @@ summary: "What if you had to be polite to your computer?"
 ---
 I recently posted [this thought](https://twitter.com/#!/beardog/status/26008471488958464) on twitter:
 
-> What if you had to be polite to your computer to unlock its full potential.
+<blockquote class="twitter-tweet" lang="en"><p>What if you had to be polite to your computer to unlock its full potential.</p>&mdash; Chris Montrois (@Montlebalm) <a href="https://twitter.com/Montlebalm/status/26008471488958464">January 14, 2011</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 The idea came to me this afternoon while considering our relationship with computers. "Hey nerd, your laptop doesn't love you," I hear someone say. Then again, you probably spend as much time looking at a screen as anything else. The experience we have while on our machines could have a greater psychological impact than we realize. What if you had to say "Please" in order for an application to launch with all available resources? Would nine hours in front of that screen feel a little more personal?
 
