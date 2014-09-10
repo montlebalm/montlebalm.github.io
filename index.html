@@ -7,30 +7,30 @@ layout: default
     <a href="/" accesskey="1" class="site-logo"></a>
   </div>
   <div class="col-sm-10">
-	  <h1>Hello there</h1>
+    <h1>Hello there</h1>
     <p>My name is Chris Montrois and I'm a Web Developer in Lafayette, Colorado. I've been known to tweet on <a href="http://twitter.com/#!/montlebalm">Twitter</a>, liason on <a href="http://www.linkedin.com/pub/chris-montrois/9/4b1/b4a">LinkedIn</a>, git on <a href="https://github.com/montlebalm">GitHub</a>, and fine-tune <a href="http://www.flickr.com/photos/chrismontrois/">Flickr</a> photos.</p>
     <p>Ocassionally I write things. You can find some of my recent posts if you look down just a bit.</p>
   </div>
 </header>
 <section class="site-content">
-	{% for post in site.posts limit:20 %}
-		<article>
-			<header class="row">
+  {% for post in site.posts limit:20 %}
+    <article>
+      <header class="row">
         <span class="post-date col-sm-2">
           <span class="long">{{ post.date | date:"%d %b %Y" }}</span>
           <span class="short">{{ post.date | date:"%D" }}</span>
         </span>
-				<h1 class="col-sm-10">
+        <h1 class="col-sm-10">
           {% if post.external_url %}
             <a href="{{ post.external_url }}" class="site-icon" data-site="{{ post.external_site }}">{{ post.title }}</a>
           {% else %}
             <a href="{{ post.url }}">{{ post.title }}</a>
           {% endif %}
-				</h1>
-			</header>
-			<div class="row">
-				<p class="post-summary col-sm-10 col-sm-offset-2">{{ post.summary }}</p>
-			</div>
-		</article>
-	{% endfor %}
+        </h1>
+      </header>
+      <div class="row">
+        <p class="post-summary col-sm-10 col-sm-offset-2">{{ post.summary }}</p>
+      </div>
+    </article>
+  {% endfor %}
 </section>
