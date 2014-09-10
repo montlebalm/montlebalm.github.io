@@ -22,7 +22,7 @@ layout: default
         </span>
         <h1 class="col-sm-10">
           {% if post.external_url %}
-            <a href="{{ post.external_url }}" class="site-icon" data-site="{{ post.external_site }}">{{ post.title }}</a>
+            <a href="{{ post.external_url }}" data-site="{{ post.external_site }}">{{ post.title }}</a>
           {% else %}
             <a href="{{ post.url }}">{{ post.title }}</a>
           {% endif %}
