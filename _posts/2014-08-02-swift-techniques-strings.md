@@ -94,15 +94,6 @@ let needle = haystack.substringFromIndex(startIndex)
 // needle == "end"
 ```
 
-Get a substring from index X to index Y.
-
-```swift
-let haystack = "Where's Waldo hiding?"
-let range = haystack.rangeOfString("Waldo")
-let needle = haystack.substringWithRange(range!)
-// needle == "Waldo"
-```
-
 ## Prefix/suffix
 
 Check whether a string starts with a given substring.
