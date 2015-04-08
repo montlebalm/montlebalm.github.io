@@ -2,35 +2,25 @@
 layout: default
 ---
 
-<header class="site-header">
-  <div class="site-logo"></div>
-</header>
-<div class="site-content">
-  <section class="section">
-    {% markdown intro.md %}
-  </section>
-  <section class="section">
-    {% for post in site.posts %}
-      <article>
-        <header>
-          <h1 class="post-title">
-            {% if post.external_url %}
-            <a href="{{ post.external_url }}">
-              <span class="external">{{ post.title }}</span>
-              <span class="site-icon" data-site="{{ post.external_site }}"></span>
-            </a>
-            {% else %}
-              <a href="{{ post.url }}">{{ post.title }}</a>
-            {% endif %}
-          </h1>
-        </header>
-        <div>
-          <p class="post-summary">{{ post.summary }}</p>
-        </div>
-      </article>
-    {% endfor %}
-  </section>
-  <section class="section">
-    {% markdown hiring.md %}
-  </section>
-</div>
+<section>
+  {% markdown intro.md %}
+</section>
+<section>
+  {% for post in site.posts %}
+    <article class="post">
+      <header>
+        <h1 class="post-title">
+          {% if post.external_url %}
+          <a href="{{ post.external_url }}">
+            <span class="external">{{ post.title }}</span>
+            <span class="site-icon" data-site="{{ post.external_site }}"></span>
+          </a>
+          {% else %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          {% endif %}
+        </h1>
+      </header>
+      <p class="post-summary">{{ post.summary }}</p>
+    </article>
+  {% endfor %}
+</section>

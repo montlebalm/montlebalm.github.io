@@ -21,7 +21,8 @@ a {
   color: $link-primary;
   text-decoration: none;
 
-  &:visited {
+  &:visited,
+  &:hover {
     color: $link-secondary;
   }
 }
@@ -34,6 +35,8 @@ h5,
 h6 {
   font-family: $typeface-title;
   font-weight: 500;
+  line-height: 1.2em;
+  margin: 0;
 }
 
 /* Layout
@@ -60,7 +63,6 @@ h6 {
 .site-content {
   line-height: 1.5em;
   margin-top: 50px;
-
 }
 
 .section {
@@ -70,12 +72,69 @@ h6 {
   }
 }
 
-.post-title {
-  font-size: 2em;
-  line-height: 1em;
+.post {
+  margin: 2em 0;
+
+  .post-title {
+    font-size: 1.6em;
+    margin: 0;
+  }
+
+  .post-date {
+    color: #999;
+    display: block;
+    margin-top: 1em;
+  }
+
+  .post-summary {
+    margin: .5em 0 0 0;
+  }
+
+  .post-content {
+    margin-top: 1em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1em;
+      font-weight: bold;
+      line-height: normal;
+      margin: 1em 0;
+    }
+
+    p,
+    ul {
+      margin-bottom: 1em;
+    }
+
+    code,
+    pre {
+      background: #f5f5f5;
+      font-size: 14px;
+    }
+
+    code {
+      padding: .2em .4em;
+    }
+
+    pre {
+      line-height: 1.5em;
+      margin-left: -1em;
+      padding: 1em;
+      width: 100%;
+
+      code {
+        padding: 0;
+      }
+    }
+  }
 }
 
 .site-footer {
+  margin-top: 2em;
   text-align: center;
 
   .social {
@@ -93,23 +152,6 @@ h6 {
   }
 }
 
-/* Components
--------------------- */
-
-.social {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    display: inline-block;
-  }
-
-  a {
-    color: $link-primary;
-  }
-}
-
 /* Icons
 -------------------- */
 
@@ -122,15 +164,15 @@ h6 {
 }
 
   .site-icon[data-site=modl] {
-    background-image: url(/images/site/sites/modl_logo.png);
+    background-image: url(/images/site-modl.png);
   }
 
   .site-icon[data-site=quickleft] {
-    background-image: url(/images/site/sites/quickleft_logo.png);
+    background-image: url(/images/site-quickleft.png);
   }
 
   .site-icon[data-site=vimeo] {
-    background-image: url(/images/site/sites/vimeo_logo.png);
+    background-image: url(/images/site-vimeo.png);
   }
 
 /* Responsive

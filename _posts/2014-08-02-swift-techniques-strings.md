@@ -1,11 +1,13 @@
 ---
-title: "Swift Techniques: Strings"
+title: "Swift: Working with Strings"
 layout: single
-summary: "Tips and tricks for manipulating strings in Swift"
+summary: "Working with strings in Swift can be cumbersome if you're coming from
+a language like JavaScript or Ruby. Here's how to solve some of the common
+problems."
 ---
 
-Sometimes manipulating strings can be a little cumbersome in Swift. Here's a handful of
-techniques you might find useful.
+Sometimes manipulating strings can be a little cumbersome in Swift. Here's
+a handful of techniques you might find useful.
 
 ## Split
 
@@ -100,7 +102,7 @@ Check whether a string starts with a given substring.
 
 ```swift
 if "Asking or telling?".hasSuffix("?") {
-	println("He's asking")
+  println("He's asking")
 }
 ```
 
@@ -108,7 +110,7 @@ Similarly, we can check whether a string ends with a substring.
 
 ```swift
 if "Dude, I know".hasPrefix("Dude") {
-	println("Dude...")
+  println("Dude...")
 }
 ```
 
@@ -131,6 +133,3 @@ Here are some articles on Swift techniques I found helpful:
     developers
 * [Regex in Swift](http://benscheirman.com/2014/06/regex-in-swift/) by Ben
     Scheirman
-
-More tips to come as I discover them. Feel free to send me feedback at
-[chris@chrismontrois.net](mailto:chris@chrismontrois.net?Subject=Swift Techniques: Strings)
