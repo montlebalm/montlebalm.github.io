@@ -1,7 +1,10 @@
 ---
-title: "Talk: Overview of Ember.js"
+title: "Ember.js: The Serious JavaScript Framework for Responsible Grown-Ups"
 layout: single
-summary: "Password: qlemberjs. Ember.js is an excellent, but largely overlooked JavaScript framework. In this talk, you'll get an overview of Ember, its pros and cons, and see a brief live coding demo."
+summary: "is a presentation I gave on Ember.js to [Quick Left][ql] during a developer Lunch & Learn. In the talk I cover the basics of Ember including what it is and why you might want to use it. Here's a [repo][ember-notes] with my slides, notes, and demo code."
 external_url: https://vimeo.com/119262771
 external_site: vimeo
 ---
+
+[ql]: https://quickleft.com/
+[ember-notes]: https://github.com/montlebalm/talk-emberjs

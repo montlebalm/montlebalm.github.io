@@ -1,0 +1,146 @@
+$color-primary: #fdb349;
+$color-secondary: #e1952d;
+$link-primary: #428BCA;
+$link-secondary: #005580;
+$typeface-title: Tahoma, sans-serif;
+$typeface-body: Helvetica, sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url(../images/site/bg_grid.png) center;
+  color: #333;
+  font-family: $typeface-body;
+  font-size: 18px;
+}
+
+a {
+  color: $link-primary;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-secondary;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $typeface-title;
+  font-weight: 500;
+}
+
+/* Layout
+-------------------- */
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.site-header {
+
+  .site-logo {
+    background: url(../images/site/logo_large.png) no-repeat;
+    background-size: 100%;
+    display: block;
+    height: 120px;
+    margin: 0 auto;
+    width: 80px;
+  }
+}
+
+.site-content {
+  line-height: 1.5em;
+  margin-top: 50px;
+
+}
+
+.section {
+
+  & + .section {
+    margin-top: 40px;
+  }
+}
+
+.post-title {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.site-footer {
+  text-align: center;
+
+  .social {
+    font-size: 36px;
+    margin: 40px 0;
+    text-align: center;
+
+    li {
+      margin: 0 10px;
+    }
+  }
+
+  .copy {
+    color: #ccc;
+  }
+}
+
+/* Components
+-------------------- */
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $link-primary;
+  }
+}
+
+/* Icons
+-------------------- */
+
+.site-icon {
+  background-repeat: no-repeat;
+  background-size: .75em;
+  display: inline-block;
+  height: .75em;
+  width: .75em;
+}
+
+  .site-icon[data-site=modl] {
+    background-image: url(/images/site/sites/modl_logo.png);
+  }
+
+  .site-icon[data-site=quickleft] {
+    background-image: url(/images/site/sites/quickleft_logo.png);
+  }
+
+  .site-icon[data-site=vimeo] {
+    background-image: url(/images/site/sites/vimeo_logo.png);
+  }
+
+/* Responsive
+-------------------- */
+
+// Phones
+@media only screen and (max-width: 480px) {
+
+  body {
+    font-size: 1.2em;
+  }
+
+}
