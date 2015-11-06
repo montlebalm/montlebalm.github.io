@@ -1,7 +1,7 @@
 ---
-title: "Reload Your Browser in Vim"
+title: "Reload Browser from Vim"
 layout: single
-summary: "Let's use AppleScript to make our Vimming more Vimmy"
+summary: "Let's use AppleScript to reload the browser without ever leaving Vim."
 ---
 
 I've been experimenting with external scripts to make my daily Vim more enjoyable. One of my pain points as a web developer is constantly refreshing the browser after editing a file. I finally got fed up with hitting `⌘+Tab` dozens of times a day and pulled out some AppleScript.
