@@ -25,7 +25,7 @@ Handlebars.registerHelper("case", function(value, options) {
 
 Here's how it's used inside the template:
 
-```handlebars
+```html
 {{#switch letter}}
   {{#case "a"}}
     A is for alpaca
@@ -53,7 +53,7 @@ Handlebars.registerHelper("letterText", function(letter, options) {
 
 Here's how the `letterText` helper would be used in the template:
 
-```handlebars
+```html
 {{letterText letter}}
 ```
 
