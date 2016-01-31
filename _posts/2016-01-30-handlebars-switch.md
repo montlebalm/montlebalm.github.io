@@ -1,5 +1,5 @@
 ---
-title: "Handlebars \"switch\" and alternatives"
+title: "Handlebars \"switch\" helper and alternatives"
 layout: single
 summary: "Creating a \"switch\" helper for Handlebars and why you might not want to use it."
 ---
