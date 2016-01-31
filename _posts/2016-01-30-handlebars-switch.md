@@ -1,7 +1,7 @@
 ---
-title: "Handlebars \"switch\" statement and alternatives"
+title: "Handlebars \"switch\" and alternatives"
 layout: single
-summary: "A \"switch\" helper for Handlebars and why you might not want to use it"
+summary: "Creating a \"switch\" helper for Handlebars and why you might not want to use it."
 ---
 
 Handlebars is a self-described logicless templating language for JavaScript. It comes with a minimal set of built-in tools and includes a plug-in system for supporting user-defined helpers. Control flow statements are particularily anemic with only `if` and `else` included out of the box. A `switch` helper [was proposed and rejected][switch-proposal] in favor of keeping the standard library lightweight. I thought a `switch` might be useful, so I created one using the Handlebars Helper API.
