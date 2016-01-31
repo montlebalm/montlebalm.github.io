@@ -61,7 +61,7 @@ Here's how the `letterText` helper would be used in the template:
 ```
 {% endraw %}
 
-I think it's clear that the latter example makes for simpler templates. It also puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I put "downside" in quotes because I could make an argument that the explicit codification of the use case actually clarifies the code.
+I think it's clear that the latter example makes for simpler templates. It also puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I use "downside" loosely because I could make an argument that the explicit codification of the use case actually clarifies the code.
 
 Feel free to use the `switch` helper if you feel that it's right for you though I hope I've made the case for why you might not need it.
 
