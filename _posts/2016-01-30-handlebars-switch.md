@@ -25,7 +25,8 @@ Handlebars.registerHelper("case", function(value, options) {
 
 Here's how it's used inside the template:
 
-```html
+```handlebars
+{% raw
 {{#switch letter}}
   {{#case "a"}}
     A is for alpaca
@@ -34,6 +35,7 @@ Here's how it's used inside the template:
     B is for bluebird
   {{/case}}
 {{/switch}}
+%}
 ```
 
 Great, but why isn't this included out of the box? Given the talented team behind Handlebars you can rest assured it wasn't an oversight. No, Handlebars eschews this logic because it wants you to determine your view logic outside the template.
@@ -54,7 +56,9 @@ Handlebars.registerHelper("letterText", function(letter, options) {
 Here's how the `letterText` helper would be used in the template:
 
 ```html
+{% raw
 {{letterText letter}}
+%}
 ```
 
 I think it's clear that the latter example makes for simpler templates and puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I put "downside" in quotes because I could make an argument that the explicit codification of the use case actually clarifies the code.
