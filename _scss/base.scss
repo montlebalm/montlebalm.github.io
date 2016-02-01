@@ -4,6 +4,7 @@ $link-primary: #428BCA;
 $link-secondary: #005580;
 $typeface-title: Tahoma, sans-serif;
 $typeface-body: Helvetica, sans-serif;
+$typeface-code: Monaco, monospace;
 
 html,
 body {
@@ -113,6 +114,7 @@ h6 {
     code,
     pre {
       background: #f5f5f5;
+      font-family: $typeface-code;
       font-size: 14px;
     }
 
