@@ -5,7 +5,10 @@ url: http://www.chrismontrois.net
 
 markdown: rdiscount
 permalink: pretty
-highlighter: pygments
+
+syntax-highlighting:
+  enabled: true
+  css: css/syntax.css
 
 sass:
   sass_dir: _scss
