@@ -8,7 +8,8 @@ Handlebars is a self-described logicless templating language for JavaScript. It 
 
 Handlebars includes the [registerHelper][register-helper] function, which allows you to create your own inline and block template helpers. Here's what it takes to create `switch` and `case`:
 
-```js
+{% highlight javascript %}
+```
 Handlebars.registerHelper("switch", function(value, options) {
   this._switch_value_ = value;
   var html = options.fn(this); // Process the body of the switch block
@@ -22,11 +23,12 @@ Handlebars.registerHelper("case", function(value, options) {
   }
 });
 ```
+{% endhighlight %}
 
 Here's how it's used inside the template:
 
-{% raw %}
-```hbs
+{% highlight hbs %}
+```
 {{#switch letter}}
   {{#case "a"}}
     A is for alpaca
@@ -36,13 +38,14 @@ Here's how it's used inside the template:
   {{/case}}
 {{/switch}}
 ```
-{% endraw %}
+{% endhighlight %}
 
 Great, but why isn't this included out of the box? Given the talented team behind Handlebars you can rest assured it wasn't an oversight. No, Handlebars omits `switch` because it takes a philosophical stance logic in templates.
 
 We can still achieve the conditional behavior we want without betraying Handlebars's ideals. Here's what it might look like if you created a specialized helper:
 
-```js
+{% highlight javascript %}
+```
 Handlebars.registerHelper("letterText", function(letter, options) {
   switch (letter) {
     case "a":
@@ -52,14 +55,15 @@ Handlebars.registerHelper("letterText", function(letter, options) {
   }
 });
 ```
+{% endhighlight %}
 
 Here's how the `letterText` helper would be used in the template:
 
-{% raw %}
-```hbs
+{% highlight hbs %}
+```
 {{letterText letter}}
 ```
-{% endraw %}
+{% endhighlight %}
 
 I think it's clear that the latter example makes for simpler templates. It also puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I use "downside" loosely because I could make an argument that the explicit codification of the use case actually clarifies the code.
 
