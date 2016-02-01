@@ -3,7 +3,7 @@ description: Developer. Dude.
 
 url: http://www.chrismontrois.net
 
-markdown: kramdown
+markdown: rdiscount
 permalink: pretty
 highlighter: pygments
 
