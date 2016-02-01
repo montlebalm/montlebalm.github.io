@@ -8,7 +8,7 @@ Handlebars is a self-described logicless templating language for JavaScript. It 
 
 Handlebars includes the [registerHelper][register-helper] function, which allows you to create your own inline and block template helpers. Here's what it takes to create `switch` and `case`:
 
-```javascript
+```js
 Handlebars.registerHelper("switch", function(value, options) {
   this._switch_value_ = value;
   var html = options.fn(this); // Process the body of the switch block
@@ -26,7 +26,7 @@ Handlebars.registerHelper("case", function(value, options) {
 Here's how it's used inside the template:
 
 {% raw %}
-```handlebars
+```hbs
 {{#switch letter}}
   {{#case "a"}}
     A is for alpaca
@@ -42,7 +42,7 @@ Great, but why isn't this included out of the box? Given the talented team behin
 
 We can still achieve the conditional behavior we want without betraying Handlebars's ideals. Here's what it might look like if you created a specialized helper:
 
-```javascript
+```js
 Handlebars.registerHelper("letterText", function(letter, options) {
   switch (letter) {
     case "a":
@@ -56,7 +56,7 @@ Handlebars.registerHelper("letterText", function(letter, options) {
 Here's how the `letterText` helper would be used in the template:
 
 {% raw %}
-```handlebars
+```hbs
 {{letterText letter}}
 ```
 {% endraw %}
