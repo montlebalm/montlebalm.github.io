@@ -38,9 +38,9 @@ Here's how it's used inside the template:
 ```
 {% endraw %}
 
-Great, but why isn't this included out of the box? Given the talented team behind Handlebars you can rest assured it wasn't an oversight. No, Handlebars omits `switch` because it takes a philosophical stance logic in templates.
+Great, but why isn't this included out of the box? Given the talented team behind Handlebars you can rest assured it wasn't an oversight. No, Handlebars omits `switch` because it takes a philosophical stance against logic in templates.
 
-We can still achieve the conditional behavior we want without betraying Handlebars's ideals. Here's what it might look like if you created a specialized helper:
+The good news is we can still achieve the same conditional behavior without betraying Handlebars's ideals. Here's what it might look like if you created a specialized helper:
 
 ```javascript
 Handlebars.registerHelper("letterText", function(letter, options) {
@@ -63,7 +63,7 @@ Here's how the `letterText` helper would be used in the template:
 
 I think it's clear that the latter example makes for simpler templates. It also puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I use "downside" loosely because I could make an argument that the explicit codification of the use case actually clarifies the code.
 
-Feel free to use the `switch` helper if you feel that it's right for you though I hope I've made the case for why you might not need it.
+Feel free to use the `switch` helper if you feel that it's right for you, though I think you'll find you can work around it.
 
 
 [handlebars-repo]: https://github.com/wycats/handlebars.js	"Handlebars.js on GitHub"
