@@ -25,6 +25,7 @@ Handlebars.registerHelper("case", function(value, options) {
 
 Here's how it's used inside the template:
 
+{% raw %}
 ```hbs
 {{#switch letter}}
   {{#case "a"}}
@@ -35,6 +36,7 @@ Here's how it's used inside the template:
   {{/case}}
 {{/switch}}
 ```
+{% endraw %}
 
 Great, but why isn't this included out of the box? Given the talented team behind Handlebars you can rest assured it wasn't an oversight. No, Handlebars omits `switch` because it takes a philosophical stance logic in templates.
 
@@ -53,9 +55,11 @@ Handlebars.registerHelper("letterText", function(letter, options) {
 
 Here's how the `letterText` helper would be used in the template:
 
+{% raw %}
 ```hbs
 {{letterText letter}}
 ```
+{% endraw %}
 
 I think it's clear that the latter example makes for simpler templates. It also puts the branching logic back into JavaScript where it belongs. The "downside" to this approach is that you'll need to make a new handler for each use case. I use "downside" loosely because I could make an argument that the explicit codification of the use case actually clarifies the code.
 
