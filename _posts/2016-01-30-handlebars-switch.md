@@ -8,8 +8,8 @@ Handlebars is a self-described logicless templating language for JavaScript. It 
 
 Handlebars includes the [registerHelper][register-helper] function, which allows you to create your own inline and block template helpers. Here's what it takes to create `switch` and `case`:
 
-{% highlight javascript %}
 ```
+{% highlight javascript %}
 Handlebars.registerHelper("switch", function(value, options) {
   this._switch_value_ = value;
   var html = options.fn(this); // Process the body of the switch block
@@ -22,8 +22,8 @@ Handlebars.registerHelper("case", function(value, options) {
     return options.fn(this);
   }
 });
-```
 {% endhighlight %}
+```
 
 Here's how it's used inside the template:
 
