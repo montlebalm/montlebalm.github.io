@@ -3,27 +3,32 @@ layout: default
 ---
 
 <section>
-  <h1>Hello there</h1>
-  <p>I am Chris Montrois, a computer programmer with nearly authentic human emotions. I've been known to tweet on <a href="http://twitter.com/montlebalm">Twitter</a>, liason on <a href="http://www.linkedin.com/pub/chris-montrois/9/4b1/b4a">LinkedIn</a>, git on <a href="https://github.com/montlebalm">GitHub</a>, and fine-tune <a href="http://www.flickr.com/photos/chrismontrois/">Flickr</a> photos.</p>
-  <p>My greatest weaknesses are that I'm too handsome and smart and humble. If that isn't a problem for you, take a look at my <a href="/linked/Chris-Montrois-Resume.pdf">resume</a>.</p>
-  <p>Ocassionally I do things. You can find some of my work if you look down just a bit.</p>
+  <h1>Why, hello there</h1>
+  <p>
+    I’m Chris, a human man with nearly authentic emotions. I don’t live on the
+    internet, but I do occasionally
+    <a href="http://twitter.com/montlebalm">tweet</a> and
+    <a href="https://github.com/montlebalm">write code</a>. I also
+    <a href="http://www.linkedin.com/pub/chris-montrois/9/4b1/b4a">work</a>, but
+    not by choice.
+  </p>
 </section>
 <section>
   {% for post in site.posts %}
-    <article class="post">
-      <header>
-        <h1 class="post-title">
-          {% if post.external_url %}
-          <a href="{{ post.external_url }}">
-            <span class="external">{{ post.title }}</span>
-            <span class="site-icon" data-site="{{ post.external_site }}"></span>
-          </a>
-          {% else %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          {% endif %}
-        </h1>
-      </header>
-      <p class="post-summary">{{ post.summary }}</p>
-    </article>
+  <article class="post">
+    <header>
+      <h1 class="post-title">
+        {% if post.external_url %}
+        <a href="{{ post.external_url }}">
+          <span class="external">{{ post.title }}</span>
+          <span class="site-icon" data-site="{{ post.external_site }}"></span>
+        </a>
+        {% else %}
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
+      </h1>
+    </header>
+    <p class="post-summary">{{ post.summary }}</p>
+  </article>
   {% endfor %}
 </section>
