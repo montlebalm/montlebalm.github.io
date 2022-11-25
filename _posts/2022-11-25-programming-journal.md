@@ -1,7 +1,7 @@
 ---
 title: "Programming Journal"
 layout: single
-summary: "A stream of this and that learned while programming for fun and profit"
+summary: "A bit of this and that learned while programming for fun and profit."
 ---
 
 ## 10/12/22 - Type checking props with `forwardRef`
