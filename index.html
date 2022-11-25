@@ -13,4 +13,7 @@ layout: default
     not by choice.
   </p>
 </section>
-<section>{% include programming_journal.md %}</section>
+<section>
+  {% capture my_include %}{% include programming_journal.md %}{% endcapture %}
+  {{ my_include | markdownify }}
+</section>
