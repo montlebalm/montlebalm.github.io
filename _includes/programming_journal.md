@@ -15,6 +15,8 @@ const Thing = forwardRef<HTMLDivElement, Props>((
 })
 ```
 
+This occurs because the desctuctured props object satisfies *and extends* the `Props` type. A necessary feature of static typing that we're not happy to see in this particular instance. 
+
 The solution is to explicitly type the props and ref params:
 
 ```
@@ -43,7 +45,7 @@ If you want to allow `<enter>` to submit the form without a visible button then 
 <input style={{ display: 'none' }} type="submit" />
 ```
 
-https://www.tjvantoll.com/2013/01/01/enter-should-submit-forms-stop-messing-with-that/
+Reference: <https://www.tjvantoll.com/2013/01/01/enter-should-submit-forms-stop-messing-with-that/>
 
 ## 9/22/22 - Auto-resize `<textarea>`
 
@@ -118,13 +120,13 @@ for (const [k, v] of Object.entries(abc)) {
 }
 ```
 
-https://effectivetypescript.com/2020/05/26/iterate-objects/
+Reference: <https://effectivetypescript.com/2020/05/26/iterate-objects/>
 
 ## 7/26/22 - React's `<button>` autoFocus
 
 React has special handling around the `autoFocus` when applied to `<button>` elements. Instead of using the HTML attribute, they call `.focus()` on mount.
 
-https://github.com/facebook/react/issues/11851
+Reference: <https://github.com/facebook/react/issues/11851>
 
 ## 7/25/22 - React `children` props
 
@@ -133,9 +135,10 @@ You can reference React `children` props from within the parent component (assum
 ```
 function Foo({ children }) {
   Children.only(children);
+  
   return cloneElement(children, {
     onClick: (e) => {
-      // Do something
+      // Do something smart
 
       children.props.onClick?.(e);
     },
@@ -145,7 +148,7 @@ function Foo({ children }) {
 
 ## 7/1/22 - CSS text gradient
 
-You can apply a color gradient to text by using a few `-webkit` properties:
+You can apply a color gradient to text by using a few choice `-webkit` properties:
 
 ```
 h1 {
@@ -155,7 +158,7 @@ h1 {
 }
 ```
 
-https://css-tricks.com/snippets/css/gradient-text/
+Reference: <https://css-tricks.com/snippets/css/gradient-text/>
 
 ## 6/28/22 - React component prop variations
 
@@ -186,7 +189,7 @@ type Props = LinkVariantProps | ButtonVariantProps;
 
 Framer motion elements (e.g., `<motion.div>`) require a `key` prop even if they're not rendered inside a list.
 
-https://www.framer.com/docs/animate-presence/##unmount-animations
+Reference: <https://www.framer.com/docs/animate-presence/##unmount-animations>
 
 ## 6/27/22 - Pseudo-buttons
 
@@ -230,11 +233,11 @@ function getButtonRoleProps<TElement extends HTMLElement>(
 }
 ```
 
-https://benfrain.com/converting-divs-into-accessible-pseudo-buttons/
+Reference: <https://benfrain.com/converting-divs-into-accessible-pseudo-buttons/>
 
 ## 6/24/22 - Focus Jest tests
 
-You can focus one or more Jest tests by using `test.only`. You can skip one or more tests by using `test.skip`. We never needed `fit` and `xit` at Slack!
+You can focus one or more Jest tests by using `test.only`. You can skip one or more tests by using `test.skip`.
 
 ## 6/23/22 - Log focus changes
 
@@ -246,7 +249,7 @@ document.addEventListener('focusin', function() {
 }, true);
 ```
 
-https://hidde.blog/console-logging-the-focused-element-as-it-changes/
+Reference: <https://hidde.blog/console-logging-the-focused-element-as-it-changes/>
 
 ## 6/22/22 - CSS visibility and focus
 
@@ -261,7 +264,7 @@ Cannot be focused
 - `visibility: hidden`
 - `tabIndex={-1}`
 
-https://fuzzbomb.github.io/accessibility-demos/visually-hidden-focus-test.html
+Reference: <https://fuzzbomb.github.io/accessibility-demos/visually-hidden-focus-test.html>
 
 ## 6/17/22 - Spacing flexbox/grid children
 
@@ -269,7 +272,7 @@ You can separate flexbox/grid children using `gap: 4px` instead of having to do 
 
 `gap` encompasses both `row-gap` and `column-gap`. Like margin, you can specify 1 value that applies to both or separate them into 2 values: `gap: <row-gap> <column-gap>`.
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/gap
+Reference: <https://developer.mozilla.org/en-US/docs/Web/CSS/gap>
 
 ## 6/17/22 - Event bubbling in React
 
@@ -278,4 +281,4 @@ All events in React bubble! Normally, events like `focus` and `blur` are local t
 > Since a portal can be anywhere in the DOM tree, it may seem that event propagation may occur separately. However, this is not the case.
 > The portal retains its position in the React tree, regardless of its actual position in the DOM tree. This means that events fired in a portal will propagate upwards to ancestors in the containing React tree, even if it is somewhere else in the DOM tree.
 
-https://jwwnz.medium.com/react-portals-and-event-bubbling-8df3e35ca3f1
+Reference: <https://jwwnz.medium.com/react-portals-and-event-bubbling-8df3e35ca3f1>
