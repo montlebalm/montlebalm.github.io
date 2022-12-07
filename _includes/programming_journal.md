@@ -1,4 +1,6 @@
-## 10/12/22 - Type checking props with `forwardRef`
+## Type checking props with `forwardRef`
+
+<div class="post-date">10/12/22</div>
 
 The generic props parameter passed to `forwardRef` is not enforced on the prop object 😱
 
@@ -15,7 +17,7 @@ const Thing = forwardRef<HTMLDivElement, Props>((
 })
 ```
 
-This occurs because the desctuctured props object satisfies *and extends* the `Props` type. A necessary feature of static typing that we're not happy to see in this particular instance. 
+This occurs because the desctuctured props object satisfies _and extends_ the `Props` type. A necessary feature of static typing that we're not happy to see in this particular instance.
 
 The solution is to explicitly type the props and ref params:
 
@@ -32,7 +34,9 @@ const Thing = forwardRef((
 })
 ```
 
-## 10/7/22 - Submitting forms with `<enter>`
+## Submitting forms with `<enter>`
+
+<div class="post-date">10/7/22</div>
 
 Forms will only naturally submit on `<enter>` button if:
 
@@ -47,7 +51,9 @@ If you want to allow `<enter>` to submit the form without a visible button then 
 
 Reference: <https://www.tjvantoll.com/2013/01/01/enter-should-submit-forms-stop-messing-with-that/>
 
-## 9/22/22 - Auto-resize `<textarea>`
+## Auto-resize `<textarea>`
+
+<div class="post-date">9/22/22</div>
 
 You can easily resize `<textarea>` elements based on their contents with a couple simple handlers.
 
@@ -73,7 +79,9 @@ return (
 );
 ```
 
-## 9/9/22 - Typing variadic params
+## Typing variadic params
+
+<div class="post-date">9/9/22</div>
 
 You can specify the number and shape of variadic params in TypeScript using conditional typing:
 
@@ -110,7 +118,9 @@ logThing('bar.event', { other: false })
 
 The result is that we get a succinct function signature while maintaining full type safety.
 
-## 8/14/22 - Typesafe Object iteration
+## Typesafe Object iteration
+
+<div class="post-date">8/14/22</div>
 
 TypeScript won't correctly type object iteration through `Object.keys`, but you _can_ with `Object.entries`.
 
@@ -122,20 +132,24 @@ for (const [k, v] of Object.entries(abc)) {
 
 Reference: <https://effectivetypescript.com/2020/05/26/iterate-objects/>
 
-## 7/26/22 - React's `<button>` autoFocus
+## React's `<button>` autoFocus
+
+<div class="post-date">7/26/22</div>
 
 React has special handling around the `autoFocus` when applied to `<button>` elements. Instead of using the HTML attribute, they call `.focus()` on mount.
 
 Reference: <https://github.com/facebook/react/issues/11851>
 
-## 7/25/22 - React `children` props
+## React `children` props
+
+<div class="post-date">7/25/22</div>
 
 You can reference React `children` props from within the parent component (assuming 1 child):
 
 ```
 function Foo({ children }) {
   Children.only(children);
-  
+
   return cloneElement(children, {
     onClick: (e) => {
       // Do something smart
@@ -146,7 +160,9 @@ function Foo({ children }) {
 }
 ```
 
-## 7/1/22 - CSS text gradient
+## CSS text gradient
+
+<div class="post-date">7/1/22</div>
 
 You can apply a color gradient to text by using a few choice `-webkit` properties:
 
@@ -160,7 +176,9 @@ h1 {
 
 Reference: <https://css-tricks.com/snippets/css/gradient-text/>
 
-## 6/28/22 - React component prop variations
+## React component prop variations
+
+<div class="post-date">6/28/22</div>
 
 You can make mutually exclusive variants of a component's props using TypeScript.
 
@@ -185,13 +203,17 @@ type ButtonVariantProps = CommonProps & Omit<ExclusiveProps, 'onClick'> {
 type Props = LinkVariantProps | ButtonVariantProps;
 ```
 
-## 6/28/22 - Framer Motion `key` prop
+## Framer Motion `key` prop
+
+<div class="post-date">6/28/22</div>
 
 Framer motion elements (e.g., `<motion.div>`) require a `key` prop even if they're not rendered inside a list.
 
 Reference: <https://www.framer.com/docs/animate-presence/##unmount-animations>
 
-## 6/27/22 - Pseudo-buttons
+## Pseudo-buttons
+
+<div class="post-date">6/27/22</div>
 
 In order to make a non-button act like a button you need to add 4 things:
 
@@ -235,11 +257,15 @@ function getButtonRoleProps<TElement extends HTMLElement>(
 
 Reference: <https://benfrain.com/converting-divs-into-accessible-pseudo-buttons/>
 
-## 6/24/22 - Focus Jest tests
+## Focus Jest tests
+
+<div class="post-date">6/24/22</div>
 
 You can focus one or more Jest tests by using `test.only`. You can skip one or more tests by using `test.skip`.
 
-## 6/23/22 - Log focus changes
+## Log focus changes
+
+<div class="post-date">6/23/22</div>
 
 I came across a code snippet that lets you log every time a new element gains focus. Very helpful for debugging!
 
@@ -251,7 +277,9 @@ document.addEventListener('focusin', function() {
 
 Reference: <https://hidde.blog/console-logging-the-focused-element-as-it-changes/>
 
-## 6/22/22 - CSS visibility and focus
+## CSS visibility and focus
+
+<div class="post-date">6/22/22</div>
 
 Can be focused
 
@@ -266,7 +294,9 @@ Cannot be focused
 
 Reference: <https://fuzzbomb.github.io/accessibility-demos/visually-hidden-focus-test.html>
 
-## 6/17/22 - Spacing flexbox/grid children
+## Spacing flexbox/grid children
+
+<div class="post-date">6/17/22</div>
 
 You can separate flexbox/grid children using `gap: 4px` instead of having to do `div + div { margin-left: 4px }`. This removes the need to know class names or require specific positions of child elements.
 
@@ -274,7 +304,9 @@ You can separate flexbox/grid children using `gap: 4px` instead of having to do 
 
 Reference: <https://developer.mozilla.org/en-US/docs/Web/CSS/gap>
 
-## 6/17/22 - Event bubbling in React
+## Event bubbling in React
+
+<div class="post-date">6/17/22</div>
 
 All events in React bubble! Normally, events like `focus` and `blur` are local to the DOM element, but in React they bubble all the way up including through portals.
 
