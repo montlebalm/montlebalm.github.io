@@ -23,12 +23,7 @@
         background-color: #f2ba40;
       }
 
-      body[data-winner="true"] .ttt-grid {
-        background-color: black;
-      }
-
       body[data-winner="true"] .ttt-cell {
-        background-color: #f2ba40;
         color: white;
       }
 
@@ -47,16 +42,13 @@
       }
 
       .ttt-grid {
-        background-color: white;
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
         height: 624px;
         width: 624px;
       }
 
       .ttt-cell {
-        background-color: black;
         font-family: "Helvetica", system;
         font-size: 200px;
         height: 200px;
@@ -64,6 +56,24 @@
         text-align: center;
         text-transform: uppercase;
         width: 200px;
+      }
+
+      .ttt-cell[data-coord="0,0"],
+      .ttt-cell[data-coord="1,0"],
+      .ttt-cell[data-coord="2,0"],
+      .ttt-cell[data-coord="0,1"],
+      .ttt-cell[data-coord="1,1"],
+      .ttt-cell[data-coord="2,1"] {
+        border-right: 12px solid white;
+      }
+
+      .ttt-cell[data-coord="0,0"],
+      .ttt-cell[data-coord="0,1"],
+      .ttt-cell[data-coord="0,2"],
+      .ttt-cell[data-coord="1,0"],
+      .ttt-cell[data-coord="1,1"],
+      .ttt-cell[data-coord="1,2"] {
+        border-bottom: 12px solid white;
       }
 
       .ttt-cell[data-mark="x"] {
