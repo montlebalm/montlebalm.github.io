@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>T3</title>
+
+    <style>
+      html,
+      body {
+        background-color: black;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      /* Win screen */
+
+      body[data-winner="true"] {
+        background-color: #f2ba40;
+      }
+
+      body[data-winner="true"] .ttt-grid {
+        background-color: black;
+      }
+
+      body[data-winner="true"] .ttt-cell {
+        background-color: #f2ba40;
+        color: white;
+      }
+
+      body[data-winner="true"] .ttt-cell[data-winner="true"] {
+        color: black;
+      }
+
+      /* Play board */
+
+      .ttt {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .ttt-grid {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        height: 624px;
+        width: 624px;
+      }
+
+      .ttt-cell {
+        background-color: black;
+        font-family: "SF Mono", system;
+        font-size: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 200px;
+      }
+
+      .ttt-cell[data-mark="x"] {
+        color: #e35f7d;
+      }
+      .ttt-cell[data-mark="x"]:before {
+        content: "x";
+        display: inline;
+      }
+
+      .ttt-cell[data-mark="o"] {
+        color: #2e59e2;
+      }
+      .ttt-cell[data-mark="o"]:before {
+        content: "o";
+        display: inline;
+      }
+
+      .ttt-cell[data-winner="true"] {
+        color: #f2ba40;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ttt">
+      <div class="ttt-grid">
+        <div class="ttt-cell" data-coord="0,0"></div>
+        <div class="ttt-cell" data-coord="0,1"></div>
+        <div class="ttt-cell" data-coord="0,2"></div>
+        <div class="ttt-cell" data-coord="1,0"></div>
+        <div class="ttt-cell" data-coord="1,1"></div>
+        <div class="ttt-cell" data-coord="1,2"></div>
+        <div class="ttt-cell" data-coord="2,0"></div>
+        <div class="ttt-cell" data-coord="2,1"></div>
+        <div class="ttt-cell" data-coord="2,2"></div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    console.log("hi!");
+
+    document.addEventListener("DOMContentLoaded", () => {
+      let lastMark = "";
+      let hasEnded = false;
+
+      document.addEventListener("click", (e) => {
+        // Handle cell clicks
+        if (!e.target.classList.contains("ttt-cell")) {
+          handleCellClick(e.target);
+        }
+      });
+
+      function handleCellClick(cell) {
+        // Don't play if the game has ended
+        if (hasEnded) return;
+
+        // See if there's already a mark
+        const mark = e.target.getAttribute("data-mark");
+        if (mark) return;
+
+        // Set the new mark
+        const nextMark = lastMark === "x" ? "o" : "x";
+        e.target.setAttribute("data-mark", nextMark);
+
+        // Remember what mark was played
+        lastMark = nextMark;
+
+        // Check if anyone won
+        score();
+      }
+
+      function score() {
+        // Get cells
+        const cell00 = document.querySelector('[data-coord="0,0"]');
+        const cell01 = document.querySelector('[data-coord="0,1"]');
+        const cell02 = document.querySelector('[data-coord="0,2"]');
+        const cell10 = document.querySelector('[data-coord="1,0"]');
+        const cell11 = document.querySelector('[data-coord="1,1"]');
+        const cell12 = document.querySelector('[data-coord="1,2"]');
+        const cell20 = document.querySelector('[data-coord="2,0"]');
+        const cell21 = document.querySelector('[data-coord="2,1"]');
+        const cell22 = document.querySelector('[data-coord="2,2"]');
+
+        const checks = [
+          // Rows
+          [cell00, cell01, cell02],
+          [cell10, cell11, cell12],
+          [cell20, cell21, cell22],
+          // Columns
+          [cell00, cell10, cell20],
+          [cell01, cell11, cell21],
+          [cell02, cell12, cell22],
+          // Diagonals
+          [cell00, cell11, cell22],
+          [cell02, cell11, cell20],
+        ];
+
+        for (let i = 0; i < checks.length; i++) {
+          const check = checks[i];
+          const mark0 = check[0].getAttribute("data-mark");
+          const mark1 = check[1].getAttribute("data-mark");
+          const mark2 = check[2].getAttribute("data-mark");
+
+          if (!mark0 || !mark1 || !mark2) continue;
+
+          if (mark0 === mark1 && mark1 === mark2) {
+            // Winner!
+            check[0].setAttribute("data-winner", "true");
+            check[1].setAttribute("data-winner", "true");
+            check[2].setAttribute("data-winner", "true");
+
+            document.body.setAttribute("data-winner", "true");
+
+            hasEnded = true;
+
+            return;
+          }
+        }
+      }
+    });
+  </script>
+</html>
