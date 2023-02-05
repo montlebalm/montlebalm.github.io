@@ -103,15 +103,15 @@
   </body>
 
   <script>
-    console.log("hi!");
+    const touchEvent = "ontouchstart" in window ? "touchstart" : "click";
 
     document.addEventListener("DOMContentLoaded", () => {
       let lastMark = "";
       let hasEnded = false;
 
-      document.addEventListener("touchstart", (e) => {
+      document.addEventListener(touchEvent, (e) => {
         // Handle cell clicks
-        if (!e.target.classList.contains("ttt-cell")) {
+        if (e.target.classList.contains("ttt-cell")) {
           handleCellClick(e.target);
         }
       });
@@ -121,12 +121,12 @@
         if (hasEnded) return;
 
         // See if there's already a mark
-        const mark = e.target.getAttribute("data-mark");
+        const mark = cell.getAttribute("data-mark");
         if (mark) return;
 
         // Set the new mark
         const nextMark = lastMark === "x" ? "o" : "x";
-        e.target.setAttribute("data-mark", nextMark);
+        cell.setAttribute("data-mark", nextMark);
 
         // Remember what mark was played
         lastMark = nextMark;
