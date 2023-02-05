@@ -109,7 +109,7 @@
       let lastMark = "";
       let hasEnded = false;
 
-      document.addEventListener("click", (e) => {
+      document.addEventListener("touchstart", (e) => {
         // Handle cell clicks
         if (!e.target.classList.contains("ttt-cell")) {
           handleCellClick(e.target);
