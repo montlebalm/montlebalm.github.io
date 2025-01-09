@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background: url(../images/site/bg_grid.png) center;
+  background: url(../images/bg_grid.png) center;
   color: #333;
   font-family: $typeface-body;
   font-size: 18px;
@@ -51,7 +51,7 @@ h6 {
 
 .site-header {
   .site-logo {
-    background: url(../images/site/logo_large.png) no-repeat;
+    background: url(../images/logo.png) no-repeat;
     background-size: 100%;
     display: block;
     height: 120px;
@@ -66,7 +66,7 @@ h6 {
 }
 
 .section {
-  & + .section {
+  &+.section {
     margin-top: 40px;
   }
 }
